@@ -1,0 +1,181 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// リセットCSS
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+// header
+.header-bar {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  background-color: aquamarine;
+
+  .header-left {
+    width: 20%;
+    height: 100%;
+
+    #logo {
+      padding: 40px;
+
+      .logo {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
+  .header-right {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .user-name {
+      width: calc(100% / 4);
+      font-size: large;
+      padding: 50px 50px;
+      color: black;
+      text-decoration: none;
+    }
+    .logout {
+      width: calc(100% / 4);
+      font-size: large;
+      padding: 50px 50px;
+      color: black;
+      text-decoration: none;
+    }
+    .item-container {
+      width: calc(100% / 4);
+      font-size: large;
+      padding: 50px 50px;
+      color: black;
+      text-decoration: none;
+    }
+    .login {
+      width: calc(100% / 4);
+      font-size: large;
+      padding: 50px 50px;
+      color: black;
+      text-decoration: none;
+    }
+    .sign-up {
+      width: calc(100% / 4);
+      font-size: large;
+      padding: 50px 50px;
+      color: black;
+      text-decoration: none;
+    }
+    .new-item {
+      width: calc(100% / 4);
+      font-size: large;
+      padding: 50px 50px;
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+// main部分
+.main-wrapper {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+
+  .side {
+    width: 10%;
+    height: 100%;
+    background-color: aquamarine;
+  }
+
+  .item-contents {
+    width: 90%;
+    height: 100%;
+
+    .main-title {
+      height: 5%;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .item-lists {
+      width: 90%;
+      height: 90%;
+      display: flex;
+      margin: 0 auto;
+
+      .list {
+        width: calc(100% / 5);
+        height: 30%;
+        margin: 20px 20px;
+        list-style: none;
+
+        
+        .item-image {
+          width: 100%;
+          height: 60%;
+        }
+
+
+        .item-img-content {
+          width: 100%;
+          height: 60%;
+
+          .item-images {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .item-info {
+          width: 100%;
+          height: 30%;
+
+          .item-name {
+            width: 100%;
+            height: calc(100% / 3);
+
+          }
+          .item-price {
+            width: 100%;
+            height: calc(100% / 1.5);
+          }
+        }
+
+        // .item-info {
+
+        // }
+      }
+    }
+  }
+}
+
+// footer部分
+.footer-bar {
+  width: 100vw;
+  height: 2vh;
+  text-align: center;
+  padding-top: 5px;
+  background-color: aquamarine;
+
+  .footer-word {
+    color: blue;
+  }
+}
