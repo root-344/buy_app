@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_10_13_050809) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "product"
-    t.string "farm"
+    t.bigint "farm_id"
     t.text "description"
     t.integer "states_id"
     t.integer "shiipping_fee_id"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_10_13_050809) do
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["farm_id"], name: "index_items_on_farm_id"
   end
 
 end

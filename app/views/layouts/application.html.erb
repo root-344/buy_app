@@ -10,6 +10,36 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-bar">
+        <div class="header-left">
+          <h1 id="logo">
+            <%= link_to "ワケアリ", "/items/index", class: "logo" %>
+          </h1>
+        </div>
+        <div class="header-right">
+        <%# 後で使用する %>
+            <%# <% if @current_user %> 
+              <%# <%= link_to "##", "/users/#{@current_user.id}", class: "user-name", id: "name-btn" %> 
+              <%# <%= link_to "ログアウト", "/logout", class: "logout", id: "logout-btn", method: :post %>
+              <%# <%= link_to "出品一覧", "/items/index", class: "item-lists" %> 
+              <%# <%= link_to "出品", "/items/new/", class: "new-item" %> 
+            <%# <% else %> 
+        <%#// 後で使用する %>
+          <%= link_to "ログイン", "/login", class: "login", id: "login-btn" %>
+          <%= link_to "新規登録", "/signup", class: "sign-up", id: "signup-btn" %>
+          <%= link_to "出品一覧", "/items/index", class: "item-container" %>
+          <%= link_to "出品", "/items/new/", class: "new-item" %>
+            <%# <% end %> 
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <div class="footer-bar">
+        <div class="footer-word"> ~ワケアリ~ </div>
+      </div>
+    </footer>
+
   </body>
 </html>
