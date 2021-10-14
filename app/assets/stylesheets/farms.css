@@ -5,7 +5,8 @@
 
 .main-wrapper .main {
   width: 50%;
-  height: 50%;
+  max-width: 600px;
+  height: 70%;
   margin: 40px auto 60px;
   border: 3px solid black;
   border-radius: 10px;
@@ -23,4 +24,8 @@
   height: 20%;
   margin: 10px auto 0;
   text-align: center;
+}
+
+.main-wrapper .main .form-control .t-form {
+  width: 70%;
 }
