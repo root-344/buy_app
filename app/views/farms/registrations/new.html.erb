@@ -1,0 +1,58 @@
+<div class="main-wrapper">
+  <div class="side"></div>
+  <div class="main">
+    <h2 class="login-title">出品者用新規登録画面</h2>
+    <%= form_with model: @farm, url: farm_registration_path, id: "new_farm", class:"new_farm", local: true do |f| %>
+    
+    <%= render "farms/shared/error_messages", resource: resource %>
+
+      <div class="form-control">
+        <%= f.label "姓（漢字）" %><br />
+        <%= f.text_field :first_name, autofocus: true, class: "t-form", maxlength: "6" %>
+      </div> 
+
+      <div class="form-control">
+        <%= f.label "名（漢字）" %><br />
+        <%= f.text_field :last_name, class: "t-form", maxlength: "6" %>
+      </div> 
+
+      <div class="form-control">
+        <%= f.label "姓（カナ）" %><br />
+        <%= f.text_field :first_name_kana, class: "t-form", maxlength: "10" %>
+      </div> 
+
+      <div class="form-control">
+        <%= f.label "名（カナ）" %><br />
+        <%= f.text_field :last_name_kana, class: "t-form", maxlength: "10" %>
+      </div> 
+
+      <div class="form-control">
+        <%= f.label "表示名" %><br />
+        <%= f.text_field :farm_name, class: "t-form", maxlength: "10" %>
+      </div> 
+
+      <div class="form-control">
+        <%= f.label "メールアドレス" %><br />
+        <%= f.email_field :email, autocomplete: "email", class: "t-form" %>
+      </div> 
+
+      <div class="form-control">
+        <%= f.label "パスワード" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %>文字以上)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: "t-form" %>
+      </div>
+
+      <div class="form-control">
+        <%= f.label "確認用パスワード" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "t-form" %>
+      </div>
+
+      <div class="form-control">
+      <%= f.submit "登録する", id: "submit-btn" %>
+
+      </div>
+    <% end %>
+  </div>
+</div>

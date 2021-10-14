@@ -1,0 +1,29 @@
+<div class="main-wrapper">
+  <div class="side"></div>
+  <div class="main">
+    <h2 class="login-title">出品者様用ログイン</h2>
+    <%= form_with model: @farm, url: farm_session_path, id: "new_farm", class:"new_farm", local: true do |f| %>
+      <div class="form-control">
+        <%= f.label "メールアドレス" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "t-form" %>
+      </div> 
+
+      <div class="form-control"> 
+        <%= f.label "パスワード" %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class: "t-form" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="form-control">
+          <%= f.check_box :remember_me %>
+          <%= f.label "完了しました" %>
+        </div>
+      <% end %>
+
+      <div class="form-control">
+      <%= f.submit "ログイン", id: "submit-btn" %>
+
+      </div>
+    <% end %>
+  </div>
+</div>
