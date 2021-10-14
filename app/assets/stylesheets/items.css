@@ -21,7 +21,7 @@ ul, li {
 
 .header-bar {
   width: 100vw;
-  height: 8vh;
+  height: 10vh;
   display: flex;
   background-color: aquamarine;
 }
@@ -32,7 +32,7 @@ ul, li {
 }
 
 .header-bar .header-left #logo {
-  padding: 40px;
+  padding: 10px;
 }
 
 .header-bar .header-left #logo .logo {
@@ -98,7 +98,7 @@ ul, li {
 
 .main-wrapper {
   width: 100vw;
-  height: 90vh;
+  height: 86vh;
   display: flex;
 }
 
@@ -127,8 +127,8 @@ ul, li {
 }
 
 .main-wrapper .item-contents .item-lists .list {
-  width: calc(100% / 5);
-  height: 30%;
+  width: calc(100% / 4);
+  height: 40%;
   margin: 20px 20px;
   list-style: none;
 }
@@ -150,7 +150,7 @@ ul, li {
 
 .main-wrapper .item-contents .item-lists .list .item-info {
   width: 100%;
-  height: 30%;
+  height: 40%;
 }
 
 .main-wrapper .item-contents .item-lists .list .item-info .item-name {
@@ -165,9 +165,9 @@ ul, li {
 
 .footer-bar {
   width: 100vw;
-  height: 2vh;
+  height: 4vh;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 3px;
   background-color: aquamarine;
 }
 
