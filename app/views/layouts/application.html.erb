@@ -14,23 +14,22 @@
       <div class="header-bar">
         <div class="header-left">
           <h1 id="logo">
-            <%= link_to "ワケアリ", "/items/index", class: "logo" %>
+            <%= link_to "ワケアリ", root_path, class: "logo" %>
           </h1>
         </div>
         <div class="header-right">
         <%# 後で使用する %>
             <%# <% if @current_user %> 
-              <%# <%= link_to "##", "/users/#{@current_user.id}", class: "user-name", id: "name-btn" %> 
-              <%# <%= link_to "ログアウト", "/logout", class: "logout", id: "logout-btn", method: :post %>
-              <%# <%= link_to "出品一覧", "/items/index", class: "item-lists" %> 
-              <%# <%= link_to "出品", "/items/new/", class: "new-item" %> 
-            <%# <% else %> 
-        <%#// 後で使用する %>
-          <%= link_to "ログイン", "/login", class: "login", id: "login-btn" %>
-          <%= link_to "新規登録", "/signup", class: "sign-up", id: "signup-btn" %>
-          <%= link_to "出品一覧", "/items/index", class: "item-container" %>
-          <%= link_to "出品", "/items/new/", class: "new-item" %>
-            <%# <% end %> 
+          <% if farm_signed_in? %>
+            <%= link_to "##さん", root_path, class: "user-name", id: "name-btn" %>
+            <%= link_to "ログアウト", destroy_farm_session_path, class: "logout", id: "logout-btn", method: :delete %>
+            <%= link_to "商品一覧", "/items/index", class: "item-container" %> 
+            <%= link_to "出品", "/items/new/", class: "new-item" %> 
+          <% else %> 
+            <%= link_to "ログイン", new_farm_session_path, class: "login", id: "login-btn" %>
+            <%= link_to "新規登録", new_farm_registration_path, class: "sign-up", id: "signup-btn" %>
+            <%= link_to "商品一覧", "/items/index", class: "item-container" %>
+          <% end %> 
         </div>
       </div>
     </header>
@@ -40,6 +39,5 @@
         <div class="footer-word"> ~ワケアリ~ </div>
       </div>
     </footer>
-
   </body>
 </html>
