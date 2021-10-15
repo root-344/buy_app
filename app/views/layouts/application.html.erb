@@ -23,16 +23,16 @@
           <% if farm_signed_in? %>
             <%= link_to "#{current_farm.nickname}さん", root_path, class: "user-name", id: "name-btn" %>
             <%= link_to "ログアウト", destroy_farm_session_path, class: "logout", id: "logout-btn", method: :delete %>
-            <%= link_to "商品一覧", "/items/index", class: "item-container" %> 
+            <%= link_to "商品一覧", root_path, class: "item-container" %> 
             <%= link_to "出品", "/items/new/", class: "new-item" %> 
           <% elsif store_signed_in? %>
             <%= link_to "#{current_store.nickname}さん", root_path, class: "user-name", id: "name-btn" %>
             <%= link_to "ログアウト", destroy_store_session_path, class: "logout", id: "logout-btn", method: :delete %>
-            <%= link_to "商品一覧", "/items/index", class: "item-container" %> 
+            <%= link_to "商品一覧", root_path, class: "item-container" %> 
           <% else %>
             <%= link_to "ログイン", new_farm_session_path, class: "login", id: "login-btn" %>
             <%= link_to "新規登録", new_farm_registration_path, class: "sign-up", id: "signup-btn" %>
-            <%= link_to "商品一覧", "/items/index", class: "item-container" %>
+            <%= link_to "商品一覧", root_path, class: "item-container" %>
           <% end %> 
           
 
