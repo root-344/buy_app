@@ -142,6 +142,7 @@
 | product                | string     | null: false                    |
 | farm_id                | reference  | null: false, foreign_key: true |
 | description            | text       | null: false                    |
+| category_id            | integer    | null: false                    |
 | states_id              | integer    | null: false                    |
 | shipping_fee_id        | integer    | null: false                    |
 | region_id              | integer    | null: false                    |
