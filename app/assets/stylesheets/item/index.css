@@ -111,6 +111,7 @@ ul, li {
 .main-wrapper .item-contents {
   width: 90%;
   height: 100%;
+  overflow: auto;
 }
 
 .main-wrapper .item-contents .main-title {
@@ -124,12 +125,15 @@ ul, li {
   height: 90%;
   display: flex;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .main-wrapper .item-contents .item-lists .list {
   width: calc(100% / 4);
   height: 40%;
   margin: 20px 20px;
+  border: 2px solid black;
+  border-radius: 10px;
   list-style: none;
 }
 
@@ -161,6 +165,16 @@ ul, li {
 .main-wrapper .item-contents .item-lists .list .item-info .item-price {
   width: 100%;
   height: calc(100% / 1.5);
+}
+
+.main-wrapper .item-contents .page-container {
+  width: 100%;
+  height: 4%;
+  text-align: center;
+}
+
+.main-wrapper .item-contents .page-container .page {
+  font-size: 19px;
 }
 
 .footer-bar {
