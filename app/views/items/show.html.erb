@@ -1,0 +1,81 @@
+<div class="main-wrapper">
+  <div class="side"></div>
+  <div class="item-show">
+    <div class="item-box">
+      <h2 class="item-name">
+        <%= "#{@item.product}" %>
+      </h2>
+      <div class="item-img-content">
+        <%# <%= image_tag @item.image, class:"item-box-img" %> 
+        <%# <% if @item.purchase.present? %> 
+          <%# <div class="sold-out">
+            <span>Sold Out!!</span>
+          </div> %>
+        <%# <% end %> 
+      </div>
+      <div class="item-price-box">
+        <div class="item-price">
+          <%= "￥#{@item.price}" %>
+        </div>
+        <div class="item-postage">
+          <%= "#{@item.shipping_fee.name}" %>
+        </div>
+      </div>
+      <div class="item-command">
+        <%# <% if farm_signed_in? && @item.purchase == nil %> 
+          <% if current_farm.id == @item.farm_id %>
+          <%= link_to "編集", root_path, method: :get, class: "item-edit-btn" %>
+          <p class="or-text">or</p>
+          <%= link_to "削除", root_path, method: :delete, class:"item-destroy-btn" %>
+          <% else %>
+            <%= link_to "購入する", root_path, class:"item-order-btn"%>
+          <% end %> 
+        <%# <% end %> 
+      </div>
+      <div class="item-description-box">
+        <span><%= "#{@item.description}" %></span>
+      </div>
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-item">出品者</th>
+            <td class="detail-value"><%= "#{@item.farm.nickname}"%></td>
+          </tr>
+          <tr>
+            <th class="detail-item">カテゴリー</th>
+            <td class="detail-value"><%= "#{@item.category.name}" %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">商品の状態</th>
+            <td class="detail-value"><%= "#{@item.states.name}" %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">配送料の負担</th>
+            <td class="detail-value"><%= "#{@item.shipping_fee.name}" %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">発送元の地域</th>
+            <td class="detail-value"><%= "#{@item.region.name}" %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">発送日の目安</th>
+            <td class="detail-value"><%= "#{@item.eta.name}" %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <%# /商品の概要 %>
+
+    <%# <div class="links">
+      <a href="#" class="change-item-btn">
+        ＜ 前の商品
+      </a>
+      <a href="#" class="change-item-btn">
+        後ろの商品 ＞
+      </a>
+    </div>
+    <a href="#" class="another-item"><%= "#{@item.category.name}" %>
+    <%# をもっと見る</a> %> 
+  </div>
+</div>
+    
