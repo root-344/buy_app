@@ -5,29 +5,30 @@
     <ul class="item-lists">
       <% @items.each do |item| %>
         <li class="list">
-          <%# <%= link_to item_path(item.id) do %> 
+          <%= link_to item_path(item.id) do %>
           <div class="item-img-content">
-            <%# <%= image_tag item.image, class: "item-images" %> 
-            <%# <% if item.order.present? %> %>
+            <%# <%= image_tag item.image, class: "item-images" %>  %>
+           <%# 後で使用 %>
+            <%# <% if item.order.present? %> 
               <%# <div class='sold-out'> %>
                 <%# <span>売り切れ!!</span> %>
-              <%# </div> %> %>
-            <%# <% end %> %>
+              <%# </div> %> 
+            <%# <% end %> 
           </div>
           <div class='item-info'>
             <h3 class='item-name'>
-              <%# <%= "#{item.product}" %> 
+              <%= "#{item.product}" %>
             </h3>
             <div class='item-price'>
-              <%# <span><%= "#{item.price}" %>
-              <%# 円<br><%= "#{item.shipping_fee.name}" %>
-              <%# </span>  %> 
+              <span><%= "#{item.price}" %>
+              円<br><%= "#{item.shipping_fee.name}" %>
+              </span>  
             </div>
           </div>
-          <%# <% end %> 
+          <% end %>
         </li>
       <% end %>
-      <%# <% if @items.length == 0 %> 
+      <% if @items.length == 0 %> 
         <li class='list'>
           <%= link_to '#' do %>
           <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-image" %> 
@@ -41,7 +42,7 @@
             </div> 
           <% end %> 
         </li>
-      <%# <% end %> 
+      <% end %> 
     </ul>
     
     <%# <%= paginate @items, class: 'page' %> 
