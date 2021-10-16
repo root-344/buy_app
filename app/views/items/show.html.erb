@@ -24,7 +24,7 @@
       <div class="item-command">
         <%# <% if farm_signed_in? && @item.purchase == nil %> 
           <% if current_farm.id == @item.farm_id %>
-          <%= link_to "編集", root_path, method: :get, class: "item-edit-btn" %>
+          <%= link_to "編集", edit_item_path(@item.id), method: :get, class: "item-edit-btn" %>
           <p class="or-text">or</p>
           <%= link_to "削除", root_path, method: :delete, class:"item-destroy-btn" %>
           <% else %>
