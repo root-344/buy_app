@@ -1,0 +1,128 @@
+.item-show {
+  width: 90%;
+  max-width: 800px;
+  min-width: 700px;
+  height: 95%;
+  margin: 20px auto 20px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  overflow: auto;
+
+  .item-box {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+    .item-name {
+      width: 100%;
+      height: 5%;
+      padding: 5px 200px;
+      font-size: 30px;
+    }
+
+    .item-img-content {
+      width: 90%;
+      height: 20%;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+
+    .item-price-box {
+      width: 70%;
+      height: 7%;
+      margin: 0 auto;
+
+      .item-price {
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        font-size: 25px;
+        font-weight: bolder;
+      }
+
+      .item-postage {
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+      }
+    }
+
+    .item-command {
+      width: 60%;
+      height: 8%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      .item-edit-btn {
+        width: 35%;
+        min-width: 150px;
+        height: 70%;
+        min-height: 50px;
+        margin: 0 10px;
+        padding: 8px 50px;
+        font-size: 25px;
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        background-color: chocolate;
+      }
+
+      .or-text {
+        width: 10%;
+        height: 70%;
+        padding: 10px 10px;
+        font-size: 20px;
+      }
+      .item-destroy-btn {
+        width: 35%;
+        min-width: 150px;
+        height: 70%;
+        min-height: 50px;
+        margin: 0 10px;
+        padding: 8px 50px;
+        border-radius: 10px;
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        background-color: crimson;
+      }
+
+      .item-order-btn {
+        width: 35%;
+        min-width: 150px;
+        height: 70%;
+        min-height: 50px;
+        margin: 0 10px;
+        padding: 8px 25px;
+        border-radius: 10px;
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        background-color: yellowgreen;
+      }
+    }
+
+    .item-description-box {
+      width: 90%;
+      height: 20%;
+      margin: 0 auto;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      background-color: whitesmoke;
+    }
+
+    .detail-table {
+      width: 90%;
+      height: 35%;
+      margin: 10px auto;
+      border: 1px solid lightslategray;
+      border-radius: 5px;
+      background-color: whitesmoke;
+
+    }
+  }
+
+}
