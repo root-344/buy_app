@@ -111,6 +111,50 @@
 
     .items-detail {
       width: 100%;
+      height: 20%;
+      display: flex;
+      margin: 20px auto;
+
+      .weight-bold-text {
+        width: 200px;
+        height: 10%;
+        font-size: 15px;
+        font-weight: bolder;
+      }
+
+      .form {
+        width: calc(100% - 200px);
+        height: 100%;
+
+        .weight-bold-text {
+          width: 100%;
+          height: 10%;
+          margin: 10px auto;
+          font-size: 15px;
+          font-weight: normal;
+         
+          .indispensable {
+            width: 10%;
+            height: 100%;
+            background-color: crimson;
+            color: white;
+            font-size: 12px;
+            font-weight: normal;
+          }
+        }
+
+        .select-box {
+          width: 40%;
+          min-width: 170px;
+          height: 15%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .items-delivery-detail {
+      width: 100%;
       height: 30%;
       display: flex;
       margin: 20px auto;
@@ -129,7 +173,7 @@
         .weight-bold-text {
           width: 100%;
           height: 10%;
-          margin: 0 auto;
+          margin: 10px auto;
           font-size: 15px;
           font-weight: normal;
          
@@ -153,11 +197,13 @@
       }
     }
 
+
     .sell-price {        
       width: 100%;
       height: 20%;
       display: flex;
       justify-content: space-between;
+      margin-top: 20px;
       flex-wrap: wrap;
 
       .weight-bold-text {
