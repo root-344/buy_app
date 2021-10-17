@@ -5,8 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
@@ -30,13 +30,36 @@
             <%= link_to "退会", store_registration_path, class: "sign-out", id:"sign-out-btn", method: :delete %>
             <%= link_to "商品一覧", root_path, class: "item-container" %> 
           <% else %>
-            <%= link_to "ログイン", new_farm_session_path, class: "login", id: "login-btn" %>
-            <%= link_to "新規登録", new_farm_registration_path, class: "sign-up", id: "signup-btn" %>
+          <div class="user-select" id="farm-select" >
+            出品者様はこちら
+            <ul class="farm-more-lists hidden" id="farm-pull-down">
+              <li class="more-list">
+                <%= link_to "出品者ログイン", new_farm_session_path, class: "login", id: "farm-login-btn" %>
+              </li>
+              <li class="more-list">
+                <%= link_to "出品者新規登録", new_farm_registration_path, class: "sign-up", id: "farm-signup-btn" %>
+              </li>
+            </ul> 
+          </div>
+          <div class="user-select" id="store-select">
+            購入者様はこちら
+            <ul class="store-more-lists hidden" id="store-pull-down">
+              <li class="more-list">
+                <%= link_to "購入者ログイン", new_store_session_path, class: "login", id: "store-login-btn" %>
+              </li>
+              <li class="more-list">
+                <%= link_to "購入者新規登録", new_store_registration_path, class: "sign-up", id: "store-signup-btn" %>
+              </li>
+            </ul>
+          </div>
+          <div class="item-container-box">
             <%= link_to "商品一覧", root_path, class: "item-container" %>
+          <div>
           <% end %> 
         </div>
       </div>
     </header>
+
     <%= yield %>
     <footer>
       <div class="footer-bar">
