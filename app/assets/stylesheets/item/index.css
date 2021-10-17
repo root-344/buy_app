@@ -45,7 +45,7 @@ ul, li {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .header-bar .header-right .user-name {
@@ -72,22 +72,6 @@ ul, li {
   text-decoration: none;
 }
 
-.header-bar .header-right .login {
-  width: calc(100% / 5);
-  font-size: large;
-  padding: 50px 50px;
-  color: black;
-  text-decoration: none;
-}
-
-.header-bar .header-right .sign-up {
-  width: calc(100% / 5);
-  font-size: large;
-  padding: 50px 50px;
-  color: black;
-  text-decoration: none;
-}
-
 .header-bar .header-right .sign-out {
   width: calc(100% / 5);
   font-size: large;
@@ -102,6 +86,86 @@ ul, li {
   padding: 50px 50px;
   color: black;
   text-decoration: none;
+}
+
+.header-bar .header-right .user-select {
+  position: relative;
+  font-size: large;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-bar .header-right .user-select .farm-more-lists {
+  width: 230px;
+  height: 70px;
+  position: absolute;
+  top: 120%;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 10px;
+  list-style: none;
+}
+
+.header-bar .header-right .user-select .farm-more-lists .more-list {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.header-bar .header-right .user-select .farm-more-lists .more-list .sign-up {
+  font-size: large;
+  color: black;
+  text-decoration: none;
+}
+
+.header-bar .header-right .user-select .farm-more-lists .more-list .login {
+  font-size: large;
+  color: black;
+  text-decoration: none;
+}
+
+.header-bar .header-right .user-select .store-more-lists {
+  width: 230px;
+  height: 70px;
+  position: absolute;
+  top: 120%;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 10px;
+  list-style: none;
+}
+
+.header-bar .header-right .user-select .store-more-lists .more-list {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.header-bar .header-right .user-select .store-more-lists .more-list .sign-up {
+  font-size: large;
+  color: black;
+  text-decoration: none;
+}
+
+.header-bar .header-right .user-select .store-more-lists .more-list .login {
+  font-size: large;
+  color: black;
+  text-decoration: none;
+}
+
+.header-bar .header-right .user-select .item-container-box {
+  font-size: large;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-bar .header-right .user-select .hidden {
+  display: none;
 }
 
 .main-wrapper {
