@@ -176,8 +176,8 @@
 | zip              | string     | null: false                   |
 | region_id        | integer    | null: false                   |
 | city             | string     | null: false                   |
-| address          | string     | null: false                   |
-| building         | string     | null: false                   |
+| house_number     | string     | null: false                   |
+| building_number  | string     | null: false                   |
 | phone            | integer    | null: false                   |
 | order_id         | reference  | null:false, foreign_key: true |
 
