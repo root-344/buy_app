@@ -6,6 +6,7 @@
         <%= "#{@item.product}" %>
       </h2>
       <div class="item-img-content">
+      <%# 後で使用する %>
         <%# <%= image_tag @item.image, class:"item-box-img" %> 
         <%# <% if @item.purchase.present? %> 
           <%# <div class="sold-out">
@@ -22,15 +23,21 @@
         </div>
       </div>
       <div class="item-command">
-        <%# <% if farm_signed_in? && @item.purchase == nil %> 
+        <% if farm_signed_in? && @item.order == nil %>
           <% if current_farm.id == @item.farm_id %>
-          <%= link_to "編集", edit_item_path(@item.id), method: :get, class: "item-edit-btn" %>
-          <p class="or-text">or</p>
-          <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy-btn" %>
-          <% else %>
-            <%= link_to "購入する", root_path, class:"item-order-btn"%>
-          <% end %> 
-        <%# <% end %> 
+            <%= link_to "編集", edit_item_path(@item.id), method: :get, class: "item-edit-btn" %>
+            <p class="or-text">or</p>
+            <%= link_to "削除", item_path(@item.id), method: :delete, class: "item-destroy-btn" %>
+          <% end %>
+        <% elsif store_signed_in? && @item.order == nil %>
+          <% if current_store.id %>
+            <%= link_to "購入する", item_orders_path(@item.id), class: "item-order-btn" %>
+          <% end %>
+        <% elsif  %>
+            <%= link_to "出品", new_farm_session_path, class: "item-edit-btn" %>
+            <p class="or-text">or</p>
+            <%= link_to "購入", new_store_session_path, class: "item-destroy-btn" %>
+        <% end %>
       </div>
       <div class="item-description-box">
         <span><%= "#{@item.description}" %></span>

@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_14_045817) do
+ActiveRecord::Schema.define(version: 2021_10_18_164257) do
+
+  create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "zip", null: false
+    t.integer "region_id", null: false
+    t.string "city", null: false
+    t.string "house_number", null: false
+    t.string "building_number"
+    t.string "phone", null: false
+    t.bigint "order_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_addresses_on_order_id"
+  end
 
   create_table "farms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -30,18 +43,27 @@ ActiveRecord::Schema.define(version: 2021_10_14_045817) do
   end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "product"
-    t.bigint "farm_id"
+    t.string "product", null: false
+    t.bigint "farm_id", null: false
     t.text "description"
-    t.integer "category_id"
-    t.integer "states_id"
-    t.integer "shipping_fee_id"
-    t.integer "region_id"
-    t.integer "eta_id"
-    t.integer "price"
+    t.integer "category_id", null: false
+    t.integer "states_id", null: false
+    t.integer "shipping_fee_id", null: false
+    t.integer "region_id", null: false
+    t.integer "eta_id", null: false
+    t.integer "price", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["farm_id"], name: "index_items_on_farm_id"
+  end
+
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "store_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["item_id"], name: "index_orders_on_item_id"
+    t.index ["store_id"], name: "index_orders_on_store_id"
   end
 
   create_table "stores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -61,4 +83,8 @@ ActiveRecord::Schema.define(version: 2021_10_14_045817) do
     t.index ["reset_password_token"], name: "index_stores_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "orders"
+  add_foreign_key "items", "farms"
+  add_foreign_key "orders", "items"
+  add_foreign_key "orders", "stores"
 end

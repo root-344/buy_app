@@ -6,11 +6,9 @@ class Item < ApplicationRecord
   belongs_to :region
   belongs_to :eta
   belongs_to :farm
-
+  has_one :order
   # 後で使用
-  # has_one :order
   # has_one_attached :image
-
   with_options presence: true do
     validates :product
     validates :description
