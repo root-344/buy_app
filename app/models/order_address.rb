@@ -1,6 +1,6 @@
 class OrderAddress
   include ActiveModel::Model
-  attr_accessor :store_id, :item_id, :zip, :region_id, :city, :house_number, :building_number, :phone
+  attr_accessor :store_id, :item_id, :zip, :region_id, :city, :house_number, :building_number, :phone, :token
   
   with_options presence: true do
     validates :store_id
@@ -10,7 +10,7 @@ class OrderAddress
     validates :house_number
     validates :building_number
     validates :phone, format: { with: /\A\d{10,11}\z/ }
-    # validates :token
+    validates :token
   end
   validates :region_id, numericality: { other_than: 1, message: 'を選んで下さい' }
 
