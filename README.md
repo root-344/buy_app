@@ -1,6 +1,6 @@
 # アプリ名
 
-  ## ワケアリ野菜販売アプリ
+  ## ワケアリ
 
 
 # 概要
@@ -108,7 +108,7 @@
 | ------------------ | --------| ------------------------- |
 | email              | string  | null: false, unique: true |
 | encrypted_password | string  | null: false               |
-| farm_name          | string  | null: false               |
+| nickname          | string  | null: false               |
 | last_name          | string  | null: false               |
 | first_name         | string  | null: false               |
 | last_name_kana     | string  | null: false               |
@@ -125,7 +125,7 @@
 | ------------------ | --------| ------------------------- |
 | email              | string  | null: false, unique: true |
 | encrypted_password | string  | null: false               |
-| store_name         | string  | null: false               |
+| nickname         | string  | null: false               |
 | last_name          | string  | null: false               |
 | first_name         | string  | null: false               |
 | last_name_kana     | string  | null: false               |
@@ -182,18 +182,3 @@
 | order_id         | reference  | null:false, foreign_key: true |
 
 - belongs_to :order
-
-## comments テーブル
-
-| Column           | Type    | Options     |
-| -----------------| --------| ------------|
-| farm_id          | integer | null: false |
-| store_id         | integer | null: false |
-| item_id          | integer | null: false |
-| text             | text    | null: false |
-
-### Association
-
-- belongs_to :item
-- belongs_to :farm
-- belongs_to :store
