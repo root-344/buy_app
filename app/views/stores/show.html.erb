@@ -1,0 +1,27 @@
+<div class="main-wrapper">
+  <div class="side"></div>
+    <div class="store-show">
+      <h2 class="main-title"><%= @nickname %>さんの購入商品一覧</h2>
+      <ul class="store-item-lists">
+        <% @orders.each do |order| %>
+          <li class="store-item-list">
+            <%= link_to item_path(order.item.id) do %>
+              <div class="item-img-content">
+              </div>
+              <div class='item-info'>
+                <h3 class='item-name'>
+                  <%= "#{order.item.product}" %>
+                </h3>
+                <div class='item-price'>
+                  <span><%= "#{order.item.price}" %>
+                  円<br><%= "#{order.item.shipping_fee.name}" %> 
+                  </span>  
+                </div>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
