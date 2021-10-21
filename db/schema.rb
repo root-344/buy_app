@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_10_18_164257) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "product", null: false
-    t.bigint "farm_id", null: false
+    t.integer "farm_id", null: false
     t.text "description"
     t.integer "category_id", null: false
     t.integer "states_id", null: false
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 2021_10_18_164257) do
     t.integer "price", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["farm_id"], name: "index_items_on_farm_id"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -84,7 +83,6 @@ ActiveRecord::Schema.define(version: 2021_10_18_164257) do
   end
 
   add_foreign_key "addresses", "orders"
-  add_foreign_key "items", "farms"
   add_foreign_key "orders", "items"
   add_foreign_key "orders", "stores"
 end
