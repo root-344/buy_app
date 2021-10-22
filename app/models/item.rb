@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   belongs_to :farm
   has_one :order
   has_one_attached :image
-  
+
   with_options presence: true do
     validates :product
     validates :description
@@ -18,9 +18,8 @@ class Item < ApplicationRecord
     validates :region_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :eta_id, numericality: { other_than: 1, message: 'を選択してください' }, format: { with: /\A[0-9]+\z/ }
     validates :price, format: { with: /\A[0-9]+\z/ }, numericality: { only_integer: true,
-                                                                      greater_than: 9, less_than: 10_000_000 }
-    # 後で使用する
-    # validates :image
+                                                             greater_than: 9, less_than: 10_000_000 }
+    validates :image
   end
 
   def self.search(search)

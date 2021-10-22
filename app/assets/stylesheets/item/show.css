@@ -28,6 +28,11 @@
   border: 1px solid black;
 }
 
+.item-show .item-box .item-img-content .item-box-img {
+  width: calc(100% / 3);
+  height: 100%;
+}
+
 .item-show .item-box .item-price-box {
   width: 70%;
   margin: 0 auto;

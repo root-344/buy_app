@@ -7,13 +7,12 @@
           <li class="farm-item-list">
             <%= link_to item_path(item.id) do %>
               <div class="item-img-content">
-                <%# <%= image_tag item.image, class: "item-images" %>  %>
-              <%# 後で使用 %>
-                <%# <% if item.order.present? %> 
-                  <%# <div class='sold-out'> %>
-                    <%# <span>売り切れ!!</span> %>
-                  <%# </div> %> 
-                <%# <% end %> 
+                <%= image_tag item.image, class: "item-images" %> 
+                <% if item.order.present? %>
+                  <div class='sold-out'> 
+                    <span>売り切れ!!</span>
+                  </div> 
+                <% end %>
               </div>
               <div class='item-info'>
                 <h3 class='item-name'>
