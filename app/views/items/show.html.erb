@@ -6,13 +6,12 @@
         <%= "#{@item.product}" %>
       </h2>
       <div class="item-img-content">
-      <%# 後で使用する %>
-        <%# <%= image_tag @item.image, class:"item-box-img" %> 
-        <%# <% if @item.purchase.present? %> 
-          <%# <div class="sold-out">
+        <%= image_tag @item.image, class:"item-box-img" %>
+        <% if @item.order.present? %>
+          <div class="sold-out">
             <span>Sold Out!!</span>
-          </div> %>
-        <%# <% end %> 
+          </div>
+        <% end %>
       </div>
       <div class="item-price-box">
         <div class="item-price">
