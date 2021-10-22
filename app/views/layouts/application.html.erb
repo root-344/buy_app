@@ -12,50 +12,58 @@
   <body>
     <header>
       <div class="header-bar">
-        <div class="header-left">
-          <h1 id="logo">
-            <%= link_to "ワケアリ", root_path, class: "logo" %>
-          </h1>
+        <div class="header-upper">
+          <%= form_with(url: search_items_path, local: true, method: :get,class: "search-form") do |f| %>
+            <%= f.text_field :keyword, placeholder: "出品物を検索する" , class: "search-text-form" %>
+            <%= f.submit "検索", class: "search-btn" %>
+          <% end %>
         </div>
-        <div class="header-right">
-          <% if farm_signed_in? %>
-            <%= link_to "#{current_farm.nickname}さん", "/farms/#{current_farm.id}", class: "user-name", id: "name-btn" %>
-            <%= link_to "ログアウト", destroy_farm_session_path, class: "logout", id: "logout-btn", method: :delete %>
-            <%= link_to "退会", farm_registration_path, class: "sign-out", id:"sign-out-btn", method: :delete %>
-            <%= link_to "商品一覧", root_path, class: "item-container" %> 
-            <%= link_to "出品", "/items/new/", class: "new-item" %> 
-          <% elsif store_signed_in? %>
-            <%= link_to "#{current_store.nickname}さん", "/stores/#{current_store.id}", class: "user-name", id: "name-btn" %>
-            <%= link_to "ログアウト", destroy_store_session_path, class: "logout", id: "logout-btn", method: :delete %>
-            <%= link_to "退会", store_registration_path, class: "sign-out", id:"sign-out-btn", method: :delete %>
-            <%= link_to "商品一覧", root_path, class: "item-container" %> 
-          <% else %>
-          <div class="user-select" id="farm-select" >
-            出品者様はこちら
-            <ul class="farm-more-lists hidden" id="farm-pull-down">
-              <li class="more-list">
-                <%= link_to "出品者ログイン", new_farm_session_path, class: "login", id: "farm-login-btn" %>
-              </li>
-              <li class="more-list">
-                <%= link_to "出品者新規登録", new_farm_registration_path, class: "sign-up", id: "farm-signup-btn" %>
-              </li>
-            </ul> 
+        <div class="header-contents-bar">
+          <div class="header-left">
+            <h1 id="logo">
+              <%= link_to "ワケアリ", root_path, class: "logo" %>
+            </h1>
           </div>
-          <div class="user-select" id="store-select">
-            購入者様はこちら
-            <ul class="store-more-lists hidden" id="store-pull-down">
-              <li class="more-list">
-                <%= link_to "購入者ログイン", new_store_session_path, class: "login", id: "store-login-btn" %>
-              </li>
-              <li class="more-list">
-                <%= link_to "購入者新規登録", new_store_registration_path, class: "sign-up", id: "store-signup-btn" %>
-              </li>
-            </ul>
+          <div class="header-right">
+            <% if farm_signed_in? %>
+              <%= link_to "#{current_farm.nickname}さん", "/farms/#{current_farm.id}", class: "user-name", id: "name-btn" %>
+              <%= link_to "ログアウト", destroy_farm_session_path, class: "logout", id: "logout-btn", method: :delete %>
+              <%= link_to "退会", farm_registration_path, class: "sign-out", id:"sign-out-btn", method: :delete %>
+              <%= link_to "商品一覧", root_path, class: "item-container" %> 
+              <%= link_to "出品", "/items/new/", class: "new-item" %> 
+            <% elsif store_signed_in? %>
+              <%= link_to "#{current_store.nickname}さん", "/stores/#{current_store.id}", class: "user-name", id: "name-btn" %>
+              <%= link_to "ログアウト", destroy_store_session_path, class: "logout", id: "logout-btn", method: :delete %>
+              <%= link_to "退会", store_registration_path, class: "sign-out", id:"sign-out-btn", method: :delete %>
+              <%= link_to "商品一覧", root_path, class: "item-container" %> 
+            <% else %>
+            <div class="user-select" id="farm-select" >
+              出品者様はこちら
+              <ul class="farm-more-lists hidden" id="farm-pull-down">
+                <li class="more-list">
+                  <%= link_to "出品者ログイン", new_farm_session_path, class: "login", id: "farm-login-btn" %>
+                </li>
+                <li class="more-list">
+                  <%= link_to "出品者新規登録", new_farm_registration_path, class: "sign-up", id: "farm-signup-btn" %>
+                </li>
+              </ul> 
+            </div>
+            <div class="user-select" id="store-select">
+              購入者様はこちら
+              <ul class="store-more-lists hidden" id="store-pull-down">
+                <li class="more-list">
+                  <%= link_to "購入者ログイン", new_store_session_path, class: "login", id: "store-login-btn" %>
+                </li>
+                <li class="more-list">
+                  <%= link_to "購入者新規登録", new_store_registration_path, class: "sign-up", id: "store-signup-btn" %>
+                </li>
+              </ul>
+            </div>
+            <div class="item-container-box">
+              <%= link_to "商品一覧", root_path, class: "item-container" %>
+            <div>
+            <% end %> 
           </div>
-          <div class="item-container-box">
-            <%= link_to "商品一覧", root_path, class: "item-container" %>
-          <div>
-          <% end %> 
         </div>
       </div>
     </header>
