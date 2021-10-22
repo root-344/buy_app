@@ -4,7 +4,8 @@ window.addEventListener('load', function(){
   const farmPullDownBox = document.getElementById("farm-pull-down")
   const storePullDownButton = document.getElementById("store-select")
   const storePullDownBox = document.getElementById("store-pull-down")
-
+  
+  if (!farmPullDownButton){ return false;}
   farmPullDownButton.addEventListener('mouseover', function() {
     this.setAttribute("style", "color:red;")
   });
