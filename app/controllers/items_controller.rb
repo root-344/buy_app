@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @items = Item.includes(:user)
@@ -39,6 +39,11 @@ class ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     redirect_to root_path if @item.destroy
+  end
+
+  def search
+    @items = Item.search(params[:keyword])   
+    @items = Item.page(params[:page]).per(6)  
   end
 
   private
