@@ -22,4 +22,12 @@ class Item < ApplicationRecord
     # 後で使用する
     # validates :image
   end
+
+  def self.search(search)
+    if search != ""
+      Item.where('product LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
 end
