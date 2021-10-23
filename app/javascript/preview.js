@@ -3,10 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const createImageHTML = (blob) => {
     const imageElement = document.createElement('div');
-
     const blobImage = document.createElement('img');
     blobImage.setAttribute('src', blob);
-
     imageElement.appendChild(blobImage);
     ImageList.appendChild(imageElement);
   };
