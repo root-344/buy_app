@@ -3,9 +3,7 @@
   <div class="sell-main">
     <h2 class="sell-title">商品の情報を入力</h2>
     <%= form_with model: @item, class: "sell-form", local: true  do |f| %>
-
     <%= render 'shared/error', model: f.object %>
-
       <div class="img-upload">
         <div class="weight-bold-text">
           出品画像
@@ -15,10 +13,14 @@
           <p>
             クリックしてファイルをアップロード
           </p>
-          <%= f.file_field :image, name: "item[images][]" ,id: "item-image" %>
+          <%= f.file_field :image, name: "item[images][]" ,id: "item-image", multiple: true %>
         </div>
       </div>
-      <div id="image-list"></div>      
+      <div id="image-list">
+        <% @item.images.each do |image| %>
+          <%= image_tag image, class:"item-box-img" %>
+        <% end %>
+      </div>
       <div class="new-items">
         <div class="weight-bold-text">
           商品名
@@ -72,7 +74,8 @@
       </div>
       <div class="sell-price">
         <div class="weight-bold-text">
-          <span>販売価格<br>(¥10〜9,999,999)</span>
+          <span>販売価格
+(¥10〜9,999,999)</span>
         </div>
         <div class="price-contents">
           <div class="price-content">
