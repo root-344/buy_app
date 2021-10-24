@@ -22,6 +22,7 @@
     .item-img-content {
       width: 90%;
       height: 150px;
+      position: relative;
       margin: 0 auto;
       border: 1px solid black;
 
@@ -29,6 +30,18 @@
         width: calc(100% / 3);
         height: 100%;
       }
+      
+      .sold-out {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        height: 40%;
+        color: goldenrod;
+        font-size: 35px;
+        text-align: center;
+        background-color: crimson;
+
+    }
     }
 
     .item-price-box {

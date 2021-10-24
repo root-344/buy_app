@@ -24,6 +24,7 @@
 .item-show .item-box .item-img-content {
   width: 90%;
   height: 150px;
+  position: relative;
   margin: 0 auto;
   border: 1px solid black;
 }
@@ -31,6 +32,17 @@
 .item-show .item-box .item-img-content .item-box-img {
   width: calc(100% / 3);
   height: 100%;
+}
+
+.item-show .item-box .item-img-content .sold-out {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 40%;
+  color: goldenrod;
+  font-size: 35px;
+  text-align: center;
+  background-color: crimson;
 }
 
 .item-show .item-box .item-price-box {

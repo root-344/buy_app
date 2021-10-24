@@ -35,11 +35,26 @@
 .farm-show .farm-item-lists .farm-item-list .item-img-content {
   width: 100%;
   height: 60%;
+  position: relative;
+  overflow: hidden;
 }
 
 .farm-show .farm-item-lists .farm-item-list .item-img-content .item-images {
   width: 100%;
   height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.farm-show .farm-item-lists .farm-item-list .item-img-content .sold-out {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  height: 80%;
+  color: goldenrod;
+  font-size: 20px;
+  text-align: center;
+  background-color: crimson;
+  transform: skewY(-20deg);
 }
 
 .farm-show .farm-item-lists .farm-item-list .item-info {
