@@ -20,15 +20,16 @@
     }
 
     .item-img-content {
-      width: 90%;
+      width: 93%;
       height: 150px;
       position: relative;
       margin: 0 auto;
       border: 1px solid black;
 
       .item-box-img {
-        width: calc(100% / 3);
+        width: 30%;
         height: 100%;
+        margin-left: 5px;
       }
       
       .sold-out {
@@ -40,8 +41,7 @@
         font-size: 35px;
         text-align: center;
         background-color: crimson;
-
-    }
+      }
     }
 
     .item-price-box {
