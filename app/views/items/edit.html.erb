@@ -8,16 +8,20 @@
 
     <div class="img-upload">
       <div class="weight-bold-text">
-        出品画像
-        <span class="indispensable">必須</span>
+        出品画像<br>(変更できません)
+        <%# <span class="indispensable">必須</span> %>
       </div>
-      <div class="click-upload">
+      <%# <div class="click-upload">
         <p>
           クリックしてファイルをアップロード
         </p>
         <%= f.file_field :image, id:"item-image" %>
-      </div>
-    </div>
+      <%# </div> %>
+    </div> 
+      <% @item.images.each do |image| %>
+        <%= image_tag image, class:"item-box-img" %>
+      <% end %>
+    <%# <div id="image-list"></div> %>
     <div class="edit-items">
       <div class="weight-bold-text">
         商品名
