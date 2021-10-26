@@ -9,18 +9,12 @@
           出品画像
           <span class="indispensable">必須</span>
         </div>
-        <div class="click-upload">
-          <p>
-            クリックしてファイルをアップロード
-          </p>
-          <%= f.file_field :image, name: "item[images][]" ,id: "item-image", multiple: true %>
+        <div class="click-upload" id="click-upload">
+          <%= f.file_field :image, id: "item-image" %>
         </div>
       </div>
-      <div id="image-list">
-        <% @item.images.each do |image| %>
-          <%= image_tag image, class:"item-box-img" %>
-        <% end %>
-      </div>
+      <div id="image-list"></div>
+      <% image_tag @item.image, id: "image" if @item.image.present? %>
       <div class="new-items">
         <div class="weight-bold-text">
           商品名
@@ -74,8 +68,7 @@
       </div>
       <div class="sell-price">
         <div class="weight-bold-text">
-          <span>販売価格
-(¥10〜9,999,999)</span>
+          <span>販売価格(¥10〜9,999,999)</span>
         </div>
         <div class="price-contents">
           <div class="price-content">

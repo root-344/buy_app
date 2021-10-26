@@ -8,8 +8,7 @@
         </h1>
         <%# 購入内容の表示 %>
         <div class='buy-item-info'>
-          <div class="buy-item-img"></div>
-          <%# <%= image_tag @item.image, class: 'buy-item-img' %> 
+          <%= image_tag @item.image, class: 'buy-item-img' %>
           <div class='buy-item-under-content'>
             <h2 class='buy-item-text'>
               <%= "#{@item.product}" %>

@@ -43,22 +43,17 @@
         width: calc(100% - 100px);
         height: 100%;
         text-align: center;
-        padding-top: 10px;
         
-        .click-upload p {
-          width: 100%;
-          height: 50%;
-        }
         #item-image {
           width: 60%;
           height: 50%;
         }
       }
-    }    
-    img {
-      width: calc(100% / 3);
-      height: 30%;
-    }
+    }   
+      .image-file {
+        width: 60%;
+        height: 60%;
+      }
 
     .new-items {
       width: 100%;
