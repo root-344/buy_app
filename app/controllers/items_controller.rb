@@ -29,6 +29,12 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
+    # if params[:item][:image_ids]
+    #   params[:item][:image_ids].each do |image_id|
+    #     image = @item.images.find(image_id)
+    #     image.purge
+    #   end
+    # end
     if @item.update(item_params)
       redirect_to item_path
     else
@@ -49,7 +55,7 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:product, :description, :category_id,
-                                 :states_id, :shipping_fee_id, :region_id, :eta_id, :price, images: []).merge(farm_id: current_farm.id)
+                                 :states_id, :shipping_fee_id, :region_id, :eta_id, :price, :image).merge(farm_id: current_farm.id)
   end
 
   def move_to_index

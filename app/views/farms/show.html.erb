@@ -3,11 +3,11 @@
     <div class="farm-show">
       <h2 class="main-title"><%= @nickname %>さんの商品一覧</h2>
       <ul class="farm-item-lists">
-        <% @items.each do |item| %>
+        <% @items.each do |item| %> 
           <li class="farm-item-list">
             <%= link_to item_path(item.id) do %>
               <div class="item-img-content">
-                <%= image_tag item.images[0], class: "item-images" %> 
+                <%= image_tag item.image, class: "item-images" if item.image.present? %> 
                 <% if item.order.present? %>
                   <div class='sold-out'> 
                     <span>売却済み</span>
@@ -26,7 +26,7 @@
               </div>
             <% end %>
           </li>
-        <% end %>
+        <% end %> 
       </ul>
     </div>
   </div>
