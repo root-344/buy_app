@@ -29,6 +29,12 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
+    if params[:item][:image_ids]
+      params[:item][:image_ids].each do |image_id|
+        image = @item.images.find(image_id)
+        image.purge
+      end
+    end
     if @item.update(item_params)
       redirect_to item_path
     else
