@@ -1,5 +1,20 @@
 <div class="main-wrapper">
   <div class="side"></div>
+  <% if farm_signed_in? %>
+    <div class="farm-show">
+      <div class="user-show-container">
+        <div class="user">
+          <h2> 
+            <%= @nickname %>
+          </h2>
+          <p>
+            <%= @email %>
+          </p>
+            <%= link_to "編集", "/farms/edit" %> 
+        </div>
+      </div>
+    </div>
+  <% end %> 
     <div class="farm-show">
       <h2 class="main-title"><%= @nickname %>さんの商品一覧</h2>
       <ul class="farm-item-lists">

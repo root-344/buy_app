@@ -24,6 +24,9 @@ window.addEventListener('load', function(){
 
 
   farmPullDownButton.addEventListener('click', function() {
+    if(storePullDownBox.getAttribute("style") == "display:block") {
+      storePullDownBox.removeAttribute("style") == "display:block"
+    }
     if (farmPullDownBox.getAttribute("style") == "display:block") {
       farmPullDownBox.removeAttribute("style", "display:block")
     } else {
@@ -32,6 +35,10 @@ window.addEventListener('load', function(){
   });
 
   storePullDownButton.addEventListener('click', function() {
+    if(farmPullDownBox.getAttribute("style") == "display:block") {
+      farmPullDownBox.removeAttribute("style") == "display:block"
+    }
+
     if (storePullDownBox.getAttribute("style") == "display:block") {
       storePullDownBox.removeAttribute("style", "display:block")
     } else {
