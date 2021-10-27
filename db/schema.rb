@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 2021_10_22_131646) do
     t.string "first_name_kana", default: "", null: false
     t.string "last_name_kana", default: "", null: false
     t.string "nickname", default: "", null: false
+    t.integer "item_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
