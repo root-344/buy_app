@@ -11,6 +11,7 @@ class Item < ApplicationRecord
   # has_many_attached :images
 
   with_options presence: true do
+    validates :image
     validates :product
     validates :description
     validates :category_id, numericality: { other_than: 1, message: 'を選択してください' }
@@ -19,12 +20,11 @@ class Item < ApplicationRecord
     validates :region_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :eta_id, numericality: { other_than: 1, message: 'を選択してください' }, format: { with: /\A[0-9]+\z/ }
     validates :price, format: { with: /\A[0-9]+\z/ }, numericality: { only_integer: true,
-                                                             greater_than: 9, less_than: 10_000_000 }
-    validates :image
+                                                                      greater_than: 9, less_than: 10_000_000, message: 'は9~10,000,000で入力してください' }
   end
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Item.where('product LIKE(?)', "%#{search}%")
     else
       Item.all

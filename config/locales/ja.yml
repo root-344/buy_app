@@ -1,0 +1,41 @@
+ja:
+  activerecord:
+    attributes:
+      farm:
+        email: メールアドレス
+        password: パスワード
+        nickname: 表示名
+        last_name: 姓（漢字）
+        first_name: 名（漢字）
+        last_name_kana: 姓（カナ）
+        first_name_kana: 名（カナ）
+      store:
+        email: メールアドレス
+        password: パスワード
+        nickname: 表示名
+        last_name: 姓（漢字）
+        first_name: 名（漢字）
+        last_name_kana: 姓（カナ）
+        first_name_kana: 名（カナ）
+      item:
+        image: 出品画像
+        product: 商品名
+        description: 商品説明
+        category_id: 商品のジャンル
+        states_id: 商品の状態
+        shipping_fee_id: 配送料
+        region_id: 発送地域
+        eta_id: 発送日数
+        price: 値段
+  
+  activemodel:
+   attributes:
+      order_address:
+        zip: 郵便番号
+        city: 市区町村
+        house_number: 番地
+        building_number: 建物名
+        phone: 電話番号（携帯番号）
+        token: カード情報
+        region_id: 都道府県
+  

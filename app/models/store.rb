@@ -9,10 +9,10 @@ class Store < ApplicationRecord
   with_options presence: true do
     validates :nickname
     VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
-    validates :password, format: { with: VALID_PASSWORD_REGEX }
-    validates :last_name, format: { with: /\A[ぁ-んァ-ン一-龥]/ }
-    validates :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/ }
-    validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
-    validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
+    validates :password, format: { with: VALID_PASSWORD_REGEX, message: 'は半角英数字で入力してください' }
+    validates :last_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は漢字で入力してください' }
+    validates :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は漢字で入力してください' }
+    validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'はカタカナで入力してください' }
+    validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'はカタカナで入力してください' }
   end
 end
