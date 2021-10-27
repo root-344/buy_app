@@ -7,6 +7,7 @@
           <li class="store-item-list">
             <%= link_to item_path(order.item.id) do %>
               <div class="item-img-content">
+                <%= image_tag @item.image, class: "item-images"%> 
               </div>
               <div class='item-info'>
                 <h3 class='item-name'>

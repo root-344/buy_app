@@ -11,7 +11,7 @@ class DeviseCreateStores < ActiveRecord::Migration[6.0]
       t.string :first_name_kana,    null: false, default: ""
       t.string :last_name_kana,     null: false, default: ""
       t.string :nickname,           null: false, default: ""
-
+      t.integer :item_id
 
       ## Recoverable
       t.string   :reset_password_token
