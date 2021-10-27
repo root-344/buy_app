@@ -20,6 +20,12 @@
   font-size: 25px;
 }
 
+.main-wrapper .store-main .login-flash-message {
+  margin: 0 auto;
+  text-align: center;
+  color: red;
+}
+
 .main-wrapper .store-main .form-control {
   width: 100%;
   height: 20%;

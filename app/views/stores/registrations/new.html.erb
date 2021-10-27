@@ -4,7 +4,7 @@
     <h2 class="login-title">新規登録画面</h2>
     <%= form_with model: @store, url: store_registration_path, id: "new_store", class:"new_store", local: true do |f| %>
     
-    <%= render "farms/shared/error_messages", resource: resource %>
+    <%= render "stores/shared/error_messages", resource: resource %>
 
       <div class="form-control">
         <%= f.label "姓（漢字）" %><br />

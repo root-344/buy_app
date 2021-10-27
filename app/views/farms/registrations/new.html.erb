@@ -4,7 +4,7 @@
     <h2 class="login-title">出品者用新規登録画面</h2>
     <%= form_with model: @farm, url: farm_registration_path, id: "new_farm", class:"new_farm", local: true do |f| %>
     
-    <%= render "farms/shared/error_messages", resource: resource %>
+      <%= render "farms/shared/error_messages", resource: resource %>
 
       <div class="form-control">
         <%= f.label "姓（漢字）" %><br />

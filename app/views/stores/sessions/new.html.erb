@@ -3,6 +3,12 @@
   <div class="store-main">
     <h2 class="login-title">購入者様用ログイン</h2>
     <%= form_with model: @store, url: store_session_path, id: "new_store", class:"new_store", local: true do |f| %>
+      
+      <div class='login-flash-message'>
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+      </div>
+      
       <div class="form-control">
         <%= f.label "メールアドレス" %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "t-form" %>

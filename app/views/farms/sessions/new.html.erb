@@ -3,6 +3,12 @@
   <div class="main">
     <h2 class="login-title">出品者様用ログイン</h2>
     <%= form_with model: @farm, url: farm_session_path, id: "new_farm", class:"new_farm", local: true do |f| %>
+
+      <div class='login-flash-message'>
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+      </div>
+
       <div class="form-control">
         <%= f.label "メールアドレス" %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "t-form" %>
