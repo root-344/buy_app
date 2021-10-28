@@ -1,5 +1,7 @@
 <div class="main-wrapper">
-  <div class="side"></div>
+
+  <%= render "shared/side"%>
+
   <div class="sell-main">
     <h2 class="sell-title">商品の情報を入力</h2>
     <%= form_with model: @item, class: "sell-form", local: true  do |f| %>

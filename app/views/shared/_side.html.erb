@@ -1,0 +1,11 @@
+  <div class="side">
+    <ul class="side-names">
+      <% @farms.each do |farm| %>
+        <li class="side-name">           
+        <%= link_to farm_path(farm.id), class: "side-farm-name" do %>
+          <%= "#{farm.nickname}様の出品一覧" %>
+        <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
