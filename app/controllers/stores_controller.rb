@@ -8,13 +8,12 @@ class StoresController < ApplicationController
   end
 
   private
+
   def set_item
     @item = Item.find(params[:id])
   end
 
   def move_to_login
-    unless store_signed_in?
-      redirect_to store_session_path 
-    end
-  end  
+    redirect_to store_session_path unless store_signed_in?
+  end
 end
