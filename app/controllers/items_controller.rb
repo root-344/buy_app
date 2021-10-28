@@ -1,13 +1,12 @@
 class ItemsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
-
+  before_action :set_item, except: [:index, :new, :create, :search]
   def index
     @items = Item.includes(:user)
     @items = Item.page(params[:page]).per(6)
   end
 
   def show
-    @item = Item.find(params[:id])
   end
 
   def new
@@ -24,11 +23,10 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
+    # 画像複数枚投稿実装の時使用
     # if params[:item][:image_ids]
     #   params[:item][:image_ids].each do |image_id|
     #     image = @item.images.find(image_id)
@@ -43,7 +41,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
     redirect_to root_path if @item.destroy
   end
 
@@ -60,5 +57,9 @@ class ItemsController < ApplicationController
 
   def move_to_index
     redirect_to action: :index unless farm_signed_in?
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end
