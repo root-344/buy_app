@@ -35,4 +35,7 @@ class OrdersController < ApplicationController
       currency: 'jpy'
     )
   end
+  def move_to_index
+    redirect_to action: :index unless store_signed_in?
+  end
 end
