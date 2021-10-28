@@ -1,5 +1,7 @@
 <div class="main-wrapper">
-  <div class="side"></div>
+
+  <%= render "shared/side"%>
+
   <div class="main">
     <h2 class="login-title">出品者用新規登録画面</h2>
     <%= form_with model: @farm, url: farm_registration_path, id: "new_farm", class:"new_farm", local: true do |f| %>
