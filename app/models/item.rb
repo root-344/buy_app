@@ -13,14 +13,13 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :image
     validates :product
-    validates :description
     validates :category_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :states_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :shipping_fee_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :region_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :eta_id, numericality: { other_than: 1, message: 'を選択してください' }, format: { with: /\A[0-9]+\z/ }
-    validates :price, format: { with: /\A[0-9]+\z/ }, numericality: { only_integer: true,
-                                                                      greater_than: 9, less_than: 10_000_000, message: 'は9~10,000,000で入力してください' }
+    validates :price, format: { with: /\A[0-9]+\z/}, numericality: { only_integer: true,
+                                                                      greater_than: 9, less_than: 10_000_000, message: 'は9~9,999,999の半角数字で入力してください' }
   end
 
   def self.search(search)
