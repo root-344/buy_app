@@ -102,7 +102,7 @@ RSpec.describe Farm, type: :model do
       it 'passwordが半角英語のみの場合新規登録できない' do
         @farm.password = 'aaaaaaa'
         @farm.valid?
-        expect(@farm.errors.full_messages).to include { '確認用パスワードとパスワードの入力が一致しません' }
+        expect(@farm.errors.full_messages).to include('確認用パスワードとパスワードの入力が一致しません')
       end
     end
   end
