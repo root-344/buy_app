@@ -8,7 +8,6 @@ class OrderAddress
     validates :zip, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'にはハイフンを入れてください' }
     validates :city
     validates :house_number
-    validates :building_number
     validates :phone, format: { with: /\A\d{10,11}\z/, message: 'は半角数字10~11桁で入力してください' }
     validates :token
   end
