@@ -30,7 +30,6 @@ class Store < ApplicationRecord
       end
     end
     with_options uniqueness: { case_sensitive: true, message: 'は既に登録されています' } do
-      validates :nickname, length: { maximum: 20, message: 'は20文字以内で登録してください' }
       validates :email
     end
   end
