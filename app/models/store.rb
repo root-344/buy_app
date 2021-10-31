@@ -5,7 +5,7 @@ class Store < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :orders, dependent: :destroy
-  
+
   with_options presence: true do
     validates :first_name
     validates :last_name
