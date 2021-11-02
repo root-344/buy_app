@@ -29,11 +29,11 @@ RSpec.describe "Items", type: :system do
     product = "testtest"
     fill_in 'item-name', with: product
     fill_in 'item-info', with: 'testtesttesttest'
-    select '根菜類（大根、人参、れんこん、いも類など）',  from: 'item[category_id]'
-    select '目立った傷はなし',  from: 'item[states_id]'
-    select '着払い（購入者負担）',  from: 'item[shipping_fee_id]'
-    select '青森県',  from: 'item[region_id]'
-    select '1~2日で発送',  from: 'item[eta_id]'
+    select '根菜類（大根、人参、れんこん、いも類など）', from: 'item[category_id]'
+    select '目立った傷はなし', from: 'item[states_id]'
+    select '着払い（購入者負担）', from: 'item[shipping_fee_id]'
+    select '青森県', from: 'item[region_id]'
+    select '1~2日で発送', from: 'item[eta_id]'
     fill_in 'item-price', with: '1999'
     # 出品ボタンを押すとItemテーブルにレコードが1つ増える事を確認する
     expect{
