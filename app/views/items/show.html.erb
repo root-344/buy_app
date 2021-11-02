@@ -37,9 +37,9 @@
             <%= link_to "購入する", item_orders_path(@item.id), class: "item-order-btn" %>
           <% end %>
         <% elsif  %>
-            <%= link_to "出品", new_farm_session_path, class: "item-edit-btn" %>
+            <%= link_to "売る", new_farm_session_path, class: "item-edit-btn" %>
             <p class="or-text">or</p>
-            <%= link_to "購入", new_store_session_path, class: "item-destroy-btn" %>
+            <%= link_to "買う", new_store_session_path, class: "item-destroy-btn" %>
         <% end %>
       </div>
       <div class="item-description-box">
