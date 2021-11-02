@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "OrderAddresses", type: :system do
+RSpec.describe 'OrderAddresses', type: :system do
   before do
     @item = FactoryBot.create(:item)
     @store = FactoryBot.create(:store)
@@ -67,19 +67,19 @@ RSpec.describe "OrderAddresses", type: :system do
 
   it '正しい情報を入力しない場合商品を購入できずに購入ページに戻される' do
     # 購入者がログインする
-      # トップページに移動する
-      visit root_path
-      # ログインページに移動する
-      visit new_store_session_path
-      # 出品者情報を入力する
-      fill_in 'store_email', with: @store.email
-      fill_in 'store_password', with: @store.password
-      # ログインボタンを押してもfarmテーブルにレコード追加されない事を確認する
-      expect{
-        find('input[value="ログイン"]').click
-      }.to change { Farm.count }.by(0)
-      # トップページに移動した事を確認する
-      expect(current_path).to eq(root_path)
+    # トップページに移動する
+    visit root_path
+    # ログインページに移動する
+    visit new_store_session_path
+    # 出品者情報を入力する
+    fill_in 'store_email', with: @store.email
+    fill_in 'store_password', with: @store.password
+    # ログインボタンを押してもfarmテーブルにレコード追加されない事を確認する
+    expect  do
+      find('input[value="ログイン"]').click
+    end.to change { Farm.count }.by(0)
+    # トップページに移動した事を確認する
+    expect(current_path).to eq(root_path)
     # トップページに商品が存在する事を確認する
     expect(page).to have_selector('img')
     # 商品詳細ページに移動する
@@ -100,9 +100,9 @@ RSpec.describe "OrderAddresses", type: :system do
     fill_in 'building', with: ''
     fill_in 'phone-number', with: ''
     # 購入ボタンをクリックしてもorderテーブルにレコードが増えない事を確認する
-    expect{
+    expect  do
       find('input[name="buy-btn"]').click
-    }.to change { Order.count }.by(0)
+    end.to change { Order.count }.by(0)
     # 商品購入ページに移動する
     expect(current_path).to eq(item_orders_path(@item))
   end
