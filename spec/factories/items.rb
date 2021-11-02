@@ -7,7 +7,7 @@ FactoryBot.define do
     shipping_fee_id  { 2 }
     region_id        { 2 }
     eta_id           { 2 }
-    price            { 2000 }
+    price            { 100 }
     association :farm
 
     after(:build) do |item|
