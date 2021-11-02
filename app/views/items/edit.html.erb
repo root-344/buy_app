@@ -27,14 +27,14 @@
         商品名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :product, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :product, class:"items-text", id:"item-edit-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
     </div>
     <div class="items-explain">
       <div class="weight-bold-text">
         商品の説明
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :description, class:"items-text", id:"item-edit-info", placeholder:"商品の説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
     </div>
     <div class="items-detail">
       <div class="weight-bold-text">商品の詳細</div>
@@ -43,12 +43,12 @@
           カテゴリー
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-edit-category"}) %>
         <div class="weight-bold-text">
           商品の状態
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:states_id, States.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+        <%= f.collection_select(:states_id, States.all, :id, :name, {}, {class:"select-box", id:"item-edit-sales-status"}) %>
       </div>
     </div>
     <div class="items-delivery-detail">
@@ -60,17 +60,17 @@
           配送料の負担
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:shipping_fee_id, ShippingFee.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+        <%= f.collection_select(:shipping_fee_id, ShippingFee.all, :id, :name, {}, {class:"select-box", id:"item-edit-shipping-fee-status"}) %>
         <div class="weight-bold-text">
           発送元の地域
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %> 
+        <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:"select-box", id:"item-edit-region"}) %> 
         <div class="weight-bold-text">
           発送までの日数
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:eta_id, Eta.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
+        <%= f.collection_select(:eta_id, Eta.all, :id, :name, {}, {class:"select-box", id:"item-edit-eta"}) %>
       </div>
     </div>
     <div class="sell-price">
@@ -84,7 +84,7 @@
             <span class="indispensable">必須</span>
           </div>
           <span class="sell-yen">¥</span>
-          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+          <%= f.text_field :price, class:"price-input", id:"item-edit-price", placeholder:"例）300" %>
         </div>
         <div class="price-content">
           <span>販売手数料 (10%)</span>
