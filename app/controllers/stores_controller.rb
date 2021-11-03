@@ -3,6 +3,7 @@ class StoresController < ApplicationController
   def show
     store = Store.find(params[:id])
     @nickname = store.nickname
+    @email = store.email
     @orders = store.orders
     @items = store.item_id
   end

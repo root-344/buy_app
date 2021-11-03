@@ -1,31 +1,52 @@
 <div class="main-wrapper">
 
   <%= render "shared/side"%>
-
-    <div class="store-show">
-      <h2 class="main-title"><%= @nickname %>さんの購入商品一覧</h2>
-      <ul class="store-item-lists">
-        <% @orders.each do |order| %>
-          <li class="store-item-list">
-            <%= link_to item_path(order.item.id) do %>
-              <div class="item-img-content">
-                <%= image_tag order.item.image, class: "item-images"%> 
+  <div class="store-show-main">
+    <% if store_signed_in?%>
+      <% if @email == current_store.email %>
+        <div class="store-show-status-box">
+          <div class="store-status">
+            <h2 class="store-nickname"> 
+              <%= @nickname %>
+            </h2>
+            <p class="store-email">
+              <%= @email %>
+            </p>
+            <div class="store-select-btn-container">
+              <div class="store-edit-btn">
+                <%= link_to "編集", "/stores/edit" %> 
+              </div> 
+              <div class="store-delete-btn">
+                <%= link_to "退会", store_registration_path, method: :delete %>
               </div>
-              <div class='item-info'>
-                <h3 class='item-name'>
-                  <%= "#{order.item.product}" %>
-                </h3>
-                <div class='item-price'>
-                  <span><%= "#{order.item.price}" %>
-                  円<br><%= "#{order.item.shipping_fee.name}" %> 
-                  </span>  
-                </div>
-              </div>
+            </div>
+          </div>
+        </div>
+        <div class="store-show">
+          <h2 class="main-title"><%= @nickname %>さんの購入商品一覧</h2>
+          <ul class="store-item-lists">
+            <% @orders.each do |order| %>
+              <li class="store-item-list">
+                <%= link_to item_path(order.item.id) do %>
+                  <div class="item-img-content">
+                    <%= image_tag order.item.image, class: "item-images"%> 
+                  </div>
+                  <div class='item-info'>
+                    <h3 class='item-name'>
+                      <%= "#{order.item.product}" %>
+                    </h3>
+                    <div class='item-price'>
+                      <span><%= "#{order.item.price}" %>
+                      円<br><%= "#{order.item.shipping_fee.name}" %> 
+                      </span>  
+                    </div>
+                  </div>
+                <% end %>
+              </li>
             <% end %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+          </ul>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-</div>
 </div>
