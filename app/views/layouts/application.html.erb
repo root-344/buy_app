@@ -14,7 +14,7 @@
       <div class="header-bar">
         <div class="header-upper">
           <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |f| %>
-            <%= f.text_field :keyword, placeholder: "出品物を検索する", class: "search-text-form" %>
+            <%= f.text_field :keyword, placeholder: "商品を検索する", class: "search-text-form" %>
             <%= f.submit "検索", class: "search-btn" %>
           <% end %>
         </div>
