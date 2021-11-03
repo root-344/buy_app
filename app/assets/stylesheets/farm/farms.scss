@@ -30,12 +30,24 @@
         height: 20%;
         text-align: center;
       }
-      .farm-edit-btn {
+
+      .farm-select-btn-container {
+        width: 20%;
         height: 20%;
-        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        .farm-edit-btn {
+          height: 20%;
+          text-align: center;
+        }
+        .farm-delete-btn {
+          height: 20%;
+          text-align: center;
+        }
       }
     }
-   
   }
 
   .farm-show {
