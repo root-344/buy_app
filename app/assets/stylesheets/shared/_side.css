@@ -1,0 +1,22 @@
+.side {
+  width: 20%;
+  height: 100%;
+  background-color: aquamarine;
+}
+
+.side .side-names {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.side .side-names .side-name {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 20px;
+  list-style: none;
+}
+
+.side .side-names .side-name .side-farm-name {
+  text-decoration: none;
+}
