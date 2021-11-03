@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
     devise_parameter_sanitizer.permit(:account_update, keys: [:nickname])
   end
-  
+
   def set_side
     @farms = Farm.all
   end

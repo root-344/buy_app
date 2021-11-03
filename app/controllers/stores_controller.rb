@@ -9,6 +9,7 @@ class StoresController < ApplicationController
   end
 
   private
+
   def move_to_login
     redirect_to store_session_path unless store_signed_in?
   end
