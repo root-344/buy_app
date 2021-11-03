@@ -6,18 +6,6 @@ class Farm < ApplicationRecord
 
   has_many :items, dependent: :destroy
 
-  # with_options presence: true do
-  #   validates :nickname
-  #   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
-  #   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  #   validates :password, format: { with: VALID_PASSWORD_REGEX, message: 'は半角英数字で入力してください' }
-  #   validates :password_confirmation, format: { with: VALID_PASSWORD_REGEX, message: 'は半角英数字で入力してください' }
-  #   validates :last_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は漢字で入力してください' }
-  #   validates :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は漢字で入力してください' }
-  #   validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'はカタカナで入力してください' }
-  #   validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'はカタカナで入力してください' }
-  #   validates :email,format: { with: VALID_EMAIL_REGEX },uniqueness: { case_sensitive: false ,message: "はすでに使用されています"}
-  # end
   with_options presence: true do
     validates :first_name
     validates :last_name
