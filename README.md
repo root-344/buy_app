@@ -1,18 +1,12 @@
 # アプリ名
 
-  ## ワケアリ
-
+  ## ワケアリ(リメイク)
 
 # 概要
 
   ### 商品の出品と購入
 
-
-# 本番環境
-
- ### 
-
- ### ログイン情報（テスト用）
+## ログイン情報（テスト用）
 
   ###  ・ 出品者用Eメール : test7@gmail.com
   ###  ・ 出品者パスワード : testtest1
@@ -21,56 +15,44 @@
 
 # 制作背景
 
-### コロナ禍において、飲食店が受ける影響は計り知れないものがあり、私が勤めていた店舗でも売り上げの激減という事態になりました。<br>そんな中、店舗を守るためにできることはできるだけ安く食材を仕入れ、原価率を減らすということでした。そのために会社が契約している業者だけでなく、自分で行ける範囲のお店で一円でも安い食材を仕入れるということを行っていました。<br>私の勤めていた会社はまだ体力のある方でしたので何とか持ち直しましたが、次々に閉店していく個人経営の店舗をみて何かできることはないだろうかと考えていました。<br>そんな時、インターネットで訳あり商品を販売しているサイトを見つけた時、少しでも安くし野菜を購入したい店舗側と、品質には問題ないがスーパーなどに出品することの出来ない訳あり商品を少々安くてもいいから売りたい農家側とを繋げることができれば、お互いにメリットが生まれるのではないかと考えこのアプリケーションを開発してみようと思いました。
+### コロナ禍において、飲食店が受ける影響は計り知れないものがあり、私が勤めていた店舗でも売り上げの激減という事態になりました。<br>そんな中、店舗を守るためにできることはできるだけ安く食材を仕入れ、原価率を減らすということでした。そのために会社が契約している業者だけでなく、自分で行ける範囲のお店で一円でも安い食材を仕入れるということを行っていました。<br>私の勤めていた会社はまだ体力のある方でしたので何とか持ち直しましたが、次々に閉店していく個人経営の店舗をみて何かできることはないだろうかと考えていました。<br>そんな時、インターネットで訳あり商品を販売しているサイトを見つけた時、少しでも安くし野菜を購入したい店舗側と、品質には問題ないがスーパーなどに出品することの出来ない訳あり商品を少々安くてもいいから売りたい農家側とを繋げることができれば、お互いにメリットが生まれるのではないかと考えこのアプリケーションを開発してみようと思いました。<br>という思いで作った最初のアプリでしたが、まだよく解っていないまま既存のコードを利用して作っていたので、本当に１からデザインも含めて作り直してみようと考え、作成しました。
 
 
 # DEMO
   
  ## トップページ（商品一覧画面） 
-  ![0de13996683d9abcafd0eb8a83716416](https://user-images.githubusercontent.com/77102175/111909171-8a521380-8a9f-11eb-926d-f918ae8044b1.gif)
-
+[![Image from Gyazo](https://i.gyazo.com/68b83a158259c1b6ffa83d719151eb64.png)](https://gyazo.com/68b83a158259c1b6ffa83d719151eb64)
  
  
- ## 新規登録動画
-  ![0aaf44a9fd9b2896c8329b114d143dbf](https://user-images.githubusercontent.com/77102175/111907422-8f5f9480-8a98-11eb-80a2-04387bfc352e.gif)
-
+ ## 出品者新規登録動画
+ ### 作成中
 
  
  ## 商品出品動画
-  ![11e022b00026c9a8d2b31e6c871fab1d](https://user-images.githubusercontent.com/77102175/111906981-aa310980-8a96-11eb-91cd-95d69f588cdf.gif)
-
+ ### 作成中
 
 
  ## 詳細表示画面 ・編集・削除画面
-  ![6ade9b370618dc884dca3de7ab84b39d](https://user-images.githubusercontent.com/77102175/111907619-802d1680-8a99-11eb-9208-db4af2042cf0.gif)
-
-
+ ### 作成中
 
  ## 購入画面
-  ![586cddf924e9f2846f62c9166278f95a](https://user-images.githubusercontent.com/77102175/111909840-3563cc80-8aa2-11eb-84c6-fdabfb23170d.gif)
-
- 
+ ### 作成中
  
  ## 検索一覧画面
-  ![a9d9e1a3d715f3225e6db5879b1f4d10](https://user-images.githubusercontent.com/77102175/111908003-e0708800-8a9a-11eb-9416-d50610a5f093.gif)
-
+ ### 作成中
  
- 
- ## コメント投稿動画
-  ![2cd3f3ae12a7a819dc04881f478e04af](https://user-images.githubusercontent.com/77102175/111907802-427cbd80-8a9a-11eb-96e9-6bb9e3b20fee.gif)
+ ## 出品者マイページ画像  
 
 
- 
- ## マイページ画像
-  ![80f2ffb285a1b40b237b8f8c03367ac7](https://user-images.githubusercontent.com/77102175/111908951-8a9ddf00-8a9e-11eb-8a83-9f2aa8a1e3fd.gif)
-  
+ ## 購入者マイページ画像  
+ ### 作成中
 
 
 # このアプリで表現させたいポイント
  
   ### ・シンプルで分かりやすい表示
  
-  ### ・全て日本語で表示させる
+  ### ・全て日本語（これどういうこと？と思わせないように表現する）で表示させる。
 
 # 使用技術
 
@@ -108,7 +90,7 @@
 | ------------------ | --------| ------------------------- |
 | email              | string  | null: false, unique: true |
 | encrypted_password | string  | null: false               |
-| nickname          | string  | null: false               |
+| nickname           | string  | null: false               |
 | last_name          | string  | null: false               |
 | first_name         | string  | null: false               |
 | last_name_kana     | string  | null: false               |
@@ -117,7 +99,6 @@
 ### Association
 
 - has_many :items
-- has_many :comments
 
 ## stores テーブル
 
@@ -125,7 +106,7 @@
 | ------------------ | --------| ------------------------- |
 | email              | string  | null: false, unique: true |
 | encrypted_password | string  | null: false               |
-| nickname         | string  | null: false               |
+| nickname           | string  | null: false               |
 | last_name          | string  | null: false               |
 | first_name         | string  | null: false               |
 | last_name_kana     | string  | null: false               |
@@ -134,13 +115,12 @@
 ### Association
 
 - has_many :orders
-- has_many :comments
 
 ## itemsテーブル
 | Column                 | Type       | Options                        |
 | ---------------------- | -----------| ------------------------------ |
 | product                | string     | null: false                    |
-| farm_id                | reference  | null: false, foreign_key: true |
+| farm                   | reference  | null: false, foreign_key: true |
 | description            | text       | null: false                    |
 | category_id            | integer    | null: false                    |
 | states_id              | integer    | null: false                    |
@@ -153,15 +133,14 @@
 
 - has_one :order
 - belongs_to :farm
-- has_many :comments
 
 
 ## orders テーブル
 
 | Column   | Type      | Options                       |
 | -------- | --------- | ----------------------------- |
-| store_id | reference | null:false, foreign_key: true |
-| item_id  | reference | null:false, foreign_key: true |
+| store    | reference | null:false, foreign_key: true |
+| item     | reference | null:false, foreign_key: true |
 
 ### Association
 
@@ -179,6 +158,6 @@
 | house_number     | string     | null: false                   |
 | building_number  | string     | null: false                   |
 | phone            | integer    | null: false                   |
-| order_id         | reference  | null:false, foreign_key: true |
+| order            | reference  | null:false, foreign_key: true |
 
 - belongs_to :order
