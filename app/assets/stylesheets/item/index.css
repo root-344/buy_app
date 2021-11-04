@@ -29,6 +29,7 @@ ul, li {
 .header-bar .header-left {
   width: 20%;
   height: 100%;
+  position: relative;
   padding: 1% 0 0 1%;
 }
 
@@ -37,17 +38,23 @@ ul, li {
   max-width: 100px;
   min-width: 50px;
   height: 100px;
-  border: 3px solid black;
-  border-radius: 5px;
+  position: absolute;
+  top: 2%;
+  left: 20%;
+  position: relative;
+  border: 3px solid red;
+  border-radius: 50%;
 }
 
 .header-bar .header-left #logo .logo {
   width: 80%;
   height: 80%;
+  position: absolute;
+  top: 2px;
+  left: 15px;
   text-decoration: none;
-  font-size: 30px;
-  color: black;
-  margin: 0 auto;
+  font-size: 33px;
+  color: red;
 }
 
 .header-bar .header-right {
