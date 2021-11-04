@@ -19,7 +19,8 @@ class Item < ApplicationRecord
     validates :region_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :eta_id, numericality: { other_than: 1, message: 'を選択してください' }, format: { with: /\A[0-9]+\z/ }
     validates :price, format: { with: /\A[0-9]+\z/ }, numericality: { only_integer: true,
-                                                                      greater_than: 49, less_than: 10_000_000, message: 'は50~9,999,999の半角数字で入力してください' }
+                                                                      greater_than: 49, less_than: 10_000_000,
+                                                                      message: 'は50~9,999,999の半角数字で入力してください' }
   end
 
   def self.search(search)
