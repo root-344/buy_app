@@ -6,7 +6,7 @@ RSpec.describe 'Farms', type: :system do
   end
   it '正しい情報を入力すれば出品者新規登録ができてトップページに移動する' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # トップページに出品者専用ボタンがある事を確認する
     expect(page).to have_content('出品者様はこちら')
     # 出品者専用ボタをクリックすると新規登録ページに遷移するボタンが表示される事を確認する
@@ -29,7 +29,7 @@ RSpec.describe 'Farms', type: :system do
       find('input[value="登録する"]').click
     end.to change { Farm.count }.by(1)
     # トップページに移動した事を確認する
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(items_path)
     # トップページに出品者の表示名が表示される事を確認する
     expect(page).to have_content("#{@farm.nickname}さん")
     # トップページにログアウトボタンが表示される事を確認する
@@ -47,7 +47,7 @@ RSpec.describe 'Farms', type: :system do
   end
   it '誤った情報では新規登録できず出品者新規登録ページに戻ってくる' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # トップページに出品者専用ボタンがある事を確認する
     expect(page).to have_content('出品者様はこちら')
     # 出品者専用ボタをクリックすると新規登録ページに遷移するボタンが表示される事を確認する
@@ -78,7 +78,7 @@ RSpec.describe 'Farms', type: :system do
   end
   it '正しい情報を入力すれば出品者ログインができてトップページに移動する' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # トップページに出品者専用ボタンがある事を確認する
     expect(page).to have_content('出品者様はこちら')
     # 出品者専用ボタをクリックするとログインページに遷移するボタンが表示される事を確認する
@@ -95,7 +95,7 @@ RSpec.describe 'Farms', type: :system do
       find('input[value="ログイン"]').click
     end.to change { Farm.count }.by(0)
     # トップページに移動した事を確認する
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(items_path)
     # トップページに出品者の表示名が表示される事を確認する
     expect(page).to have_content("#{@farm.nickname}さん")
     # トップページにログアウトボタンが表示される事を確認する
@@ -113,7 +113,7 @@ RSpec.describe 'Farms', type: :system do
   end
   it '誤った情報ではログインできず出品者ログインページに戻ってくる' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # トップページに出品者専用ボタンがある事を確認する
     expect(page).to have_content('出品者様はこちら')
     # 出品者専用ボタをクリックするとログインページに遷移するボタンが表示される事を確認する

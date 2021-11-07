@@ -6,7 +6,7 @@ RSpec.describe 'Stores', type: :system do
   end
   it '正しい情報を入力すれば購入者新規登録ができてトップページに移動する' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # トップページに購入者専用ボタンがある事を確認する
     expect(page).to have_content('購入者様はこちら')
     # 購入者専用ボタをクリックすると新規登録ページに遷移するボタンやログインページに遷移するボタンが表示される事を確認する
@@ -29,7 +29,7 @@ RSpec.describe 'Stores', type: :system do
       find('input[value="登録する"]').click
     end.to change { Store.count }.by(1)
     # トップページに移動した事を確認する
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(items_path)
     # トップページに購入者の表示名が表示される事を確認する
     expect(page).to have_content("#{@store.nickname}さん")
     # トップページにログアウトボタンが表示される事を確認する
@@ -46,7 +46,7 @@ RSpec.describe 'Stores', type: :system do
 
   it '誤った情報では新規登録できず購入者新規登録ページに戻ってくる' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # トップページに購入者専用ボタンがある事を確認する
     expect(page).to have_content('購入者様はこちら')
     # 購入者専用ボタをクリックすると新規登録ページに遷移するボタンやログインページに遷移するボタンが表示される事を確認する
@@ -78,7 +78,7 @@ RSpec.describe 'Stores', type: :system do
 
   it '正しい情報を入力すれば購入者ログインができてトップページに移動する' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # トップページに購入者専用ボタンがある事を確認する
     expect(page).to have_content('購入者様はこちら')
     # 購入者専用ボタをクリックするとログインページに遷移するボタンが表示される事を確認する
@@ -95,7 +95,7 @@ RSpec.describe 'Stores', type: :system do
       find('input[value="ログイン"]').click
     end.to change { Store.count }.by(0)
     # トップページに移動した事を確認する
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(items_path)
     # トップページに購入者の表示名が表示される事を確認する
     expect(page).to have_content("#{@store.nickname}さん")
     # トップページにログアウトボタンが表示される事を確認する
@@ -112,7 +112,7 @@ RSpec.describe 'Stores', type: :system do
 
   it '誤った情報ではログインできず購入者ログインページに戻ってくる' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # トップページに出品者専用ボタンがある事を確認する
     expect(page).to have_content('購入者様はこちら')
     # 出品者専用ボタをクリックするとログインページに遷移するボタンが表示される事を確認する

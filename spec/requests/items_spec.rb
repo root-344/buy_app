@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Items', type: :request do
   before do
     @item = FactoryBot.create(:item)
-    get root_path
+    get items_path
   end
   describe 'GET /index' do
     it 'indexアクションにリクエストすると正常にレスポンスが返ってくる' do

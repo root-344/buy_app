@@ -7,7 +7,7 @@ RSpec.describe 'Items', type: :system do
   it 'ログインした出品者は商品を出品できる' do
     # ログインする
     # トップページに移動する
-    visit root_path
+    visit items_path
     # ログインページに移動する
     visit new_farm_session_path
     # 出品者情報を入力する
@@ -18,7 +18,7 @@ RSpec.describe 'Items', type: :system do
       find('input[value="ログイン"]').click
     end.to change { Farm.count }.by(0)
     # トップページに移動した事を確認する
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(items_path)
     # 出品画面に移動するボタンが存在する
     expect(page).to have_content('出品')
     # 出品画面に移動する
@@ -40,7 +40,7 @@ RSpec.describe 'Items', type: :system do
       find('input[value="出品する"]').click
     end.to change { Item.count }.by(1)
     # トップページに遷移する
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(items_path)
     # トップページに出品した商品の画像が表示される事を確認する
     expect(page).to have_selector('img')
     # トップページに出品した商品の商品名が表示される事を確認する
@@ -53,7 +53,7 @@ RSpec.describe 'Items', type: :system do
 
   it 'ログインしてない出品者は商品を出品できない' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # 出品画面に移動するボタンが存在しない事を確認する
     expect(page).to have_no_selector '.new-item', text: '出品'
   end

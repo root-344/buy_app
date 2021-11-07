@@ -8,10 +8,10 @@ RSpec.describe 'OrderAddresses', type: :system do
 
   # it  '購入者がログインしていれば売り切れていない商品を購入できる' do
   #   # トップページに移動する
-  #   visit root_path
+  #   visit items_path
   #   # 購入者がログインする
   #     # トップページに移動する
-  #     visit root_path
+  #     visit items_path
   #     # ログインページに移動する
   #     visit new_store_session_path
   #     # 出品者情報を入力する
@@ -22,7 +22,7 @@ RSpec.describe 'OrderAddresses', type: :system do
   #       find('input[value="ログイン"]').click
   #     }.to change { Farm.count }.by(0)
   #     # トップページに移動した事を確認する
-  #     expect(current_path).to eq(root_path)
+  #     expect(current_path).to eq(items_path)
   #   # トップページに商品が存在する事を確認する
   #   expect(page).to have_selector('img')
   #   # 商品詳細ページに移動する
@@ -49,14 +49,14 @@ RSpec.describe 'OrderAddresses', type: :system do
   #     find('input[name="buy-btn"]').click
   #   }.to change { Order.count }.by(1)
   #   # トップページに遷移する
-  #   expect(current_path).to eq(root_path)
+  #   expect(current_path).to eq(items_path)
   #   # トップページの商品画像に売り切れている事を確認する
   #   expect(page).to have_content('売却済み')
   # end
 
   it '購入者がログインしていない場合商品を購入できない' do
     # トップページに移動する
-    visit root_path
+    visit items_path
     # トップページに商品が存在する事を確認する
     expect(page).to have_selector('img')
     # 商品詳細ページに移動する
@@ -68,7 +68,7 @@ RSpec.describe 'OrderAddresses', type: :system do
   it '正しい情報を入力しない場合商品を購入できずに購入ページに戻される' do
     # 購入者がログインする
     # トップページに移動する
-    visit root_path
+    visit items_path
     # ログインページに移動する
     visit new_store_session_path
     # 出品者情報を入力する
@@ -79,7 +79,7 @@ RSpec.describe 'OrderAddresses', type: :system do
       find('input[value="ログイン"]').click
     end.to change { Farm.count }.by(0)
     # トップページに移動した事を確認する
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(items_path)
     # トップページに商品が存在する事を確認する
     expect(page).to have_selector('img')
     # 商品詳細ページに移動する
