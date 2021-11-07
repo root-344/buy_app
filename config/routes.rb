@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     passwords:     'farms/passwords',
     registrations: 'farms/registrations'
   }
-  root to: 'items#index'
+  root to: 'homes#index'
   resources :items do
     resources :orders, only: [:index, :create]
     collection do
@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   end
   resources :farms, only: :show
   resources :stores, only: :show
+  resources :homes, only: :index
 end
