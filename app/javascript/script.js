@@ -45,22 +45,4 @@ window.addEventListener('load', function(){
       storePullDownBox.setAttribute("style", "display:block");
     }
   });
-
-  // secondFarmPullDownButton.addEventListener('click', function() {
-  //   if (secondFarmPullDownBox.getAttribute("style") == "display:block") {
-  //     secondFarmPullDownBox.removeAttribute("style", "display:block")
-  //   } else {
-  //   secondFarmPullDownBox.setAttribute("style", "display:block");
-  //   }
-  // });
-
-  // secondStorePullDownButton.addEventListener('click', function() {
-  //   if (secondStorePullDownBox.getAttribute("style") == "display:block") {
-  //     secondStorePullDownBox.removeAttribute("style", "display:block")
-  //   } else {
-  //     secondStorePullDownBox.setAttribute("style", "display:block");
-  //   }
-  // });
-
-
 });
