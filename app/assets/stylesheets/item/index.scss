@@ -25,11 +25,12 @@ ul,li {
 .header-bar {
   width: 100vw;
   height: 20vh;
-  background-color: aquamarine;
   display: flex;
+  background-color: seashell;
 
   .header-left {
     width: 20%;
+    min-width: 200px;
     height: 100%;
     position: relative;
     padding: 1% 0 0 1%;
@@ -40,19 +41,20 @@ ul,li {
       max-width: 100px;
       min-width: 50px;
       height: 100px;
+      min-width: 100px;
       position: absolute;
       top: 2%;
       left: 20%;
       position: relative;
-      border: 3px solid red;
+      border: 7px solid red;
       border-radius: 50%;
 
       .logo {
         width: 80%;
         height: 80%;
         position: absolute;
-        top: 2px;
-        left: 15px;
+        top: -4px;
+        left: 10px;
         text-decoration: none;
         font-size: 33px;
         color: red;
@@ -109,6 +111,7 @@ ul,li {
         margin: 10px 0 0 0;
         text-align: center;
         color: black;
+        font-weight: bold;
         text-decoration: none;
       }
 
@@ -119,6 +122,7 @@ ul,li {
         margin: 10px 0 0 0;
         text-align: center;
         color: black;
+        font-weight: bold;
         text-decoration: none;
       }
 
@@ -129,6 +133,7 @@ ul,li {
         margin: 10px 0 0 0;
         text-align: center;
         color: black;
+        font-weight: bold;
         text-decoration: none;
       }
 
@@ -139,16 +144,22 @@ ul,li {
         margin: 10px 0 0 0;
         text-align: center;
         color: black;
+        font-weight: bold;
         text-decoration: none;
       }
 
       // ログインしていない場合
       .user-select {
+        width: 30%;
         height: 70%;
         position: relative;
         font-size: large;
         margin: 10px 0 0 10px;
+        padding-top: 7px;
+        border: 2px solid black;
+        background-color: azure;
         color: black;
+        font-weight: bold;
         cursor: pointer;
         text-decoration: none;
         
@@ -217,9 +228,12 @@ ul,li {
 
       .item-container-box {
         width: 20%;
-        height: 60%;  
+        height: 70%;  
         margin: 10px 0 0 0;
-        cursor: pointer;
+        padding-top: 7px;
+        background-color: azure;
+        border: 2px solid black;
+        cursor: pointer;  
       }
     }
   }
@@ -234,6 +248,8 @@ ul,li {
   .item-contents {
     width: 80%;
     height: 100%;
+    background-image: url('https://i.gyazo.com/4cc910e0642a22beae77e0aa61cfcf8a.jpg');
+    background-size: cover;
     overflow: auto;
 
     .main-title {
@@ -255,6 +271,7 @@ ul,li {
         border: 2px solid black;
         border-radius: 10px;
         list-style: none;
+        background-color: hsla(59, 82%, 48%, 0.8);
 
         .item-img-content {
           width: 100%;
@@ -316,7 +333,7 @@ ul,li {
   height: 4vh;
   text-align: center;
   padding-top: 3px;
-  background-color: aquamarine;
+  background-color: seashell;
 
   .footer-word {
     color: blue;
