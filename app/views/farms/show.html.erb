@@ -1,57 +1,60 @@
 <div class="main-wrapper">
 
   <%= render "shared/side"%>
+
   <div class="farm-show-main">
-  <% if farm_signed_in?%>
-    <div class="farm-show-status-box">
-      <div class="farm-status">
-        <h2 class="farm-nickname"> 
-          <%= @nickname %>
-        </h2>
-        <p class="farm-email">
-          <%= @email %>
-        </p>
-        <% if @email == current_farm.email %>
-          <div class="farm-select-btn-container">
-            <%# <div class="farm-edit-btn"> %>
-              <%# <%= link_to "編集", "/farms/edit" %> 
-            <%# </div> 
-            <div class="farm-delete-btn"> %>
-              <%# <%= link_to "退会", farm_registration_path, method: :delete %>
-            <%# </div> %>
+    <div class="farm-show-box">
+      <% if farm_signed_in?%>
+        <div class="farm-show-status-box">
+          <div class="farm-status">
+            <h2 class="farm-nickname"> 
+              <%= @nickname %>
+            </h2>
+            <p class="farm-email">
+              <%= @email %>
+            </p>
+            <% if @email == current_farm.email %>
+              <div class="farm-select-btn-container">
+                <%# <div class="farm-edit-btn"> %>
+                  <%# <%= link_to "編集", "/farms/edit" %> 
+                <%# </div> 
+                <div class="farm-delete-btn"> %>
+                  <%# <%= link_to "退会", farm_registration_path, method: :delete %>
+                <%# </div> %>
+              </div>
+            <% end %> 
           </div>
-        <% end %> 
-      </div>
-    </div>
-  <% end %>
-    <div class="farm-show">
-      <h2 class="main-title"><%= @nickname %>さんの商品一覧</h2>
-      <ul class="farm-item-lists">
-        <% @items.each do |item| %> 
-          <li class="farm-item-list">
-            <%= link_to item_path(item.id) do %>
-              <div class="item-img-content">
-                <%= image_tag item.image, class: "item-images" if item.image.present? %> 
-                <% if item.order.present? %>
-                  <div class='sold-out'> 
-                    <span>売却済み</span>
-                  </div> 
-                <% end %>
-              </div>
-              <div class='item-info'>
-                <h3 class='item-name'>
-                  <%= "#{item.product}" %>
-                </h3>
-                <div class='item-price'>
-                  <span><%= "#{item.price}" %>
-                  円<br><%= "#{item.shipping_fee.name}" %>
-                  </span>  
+        </div>
+      <% end %>
+      <div class="farm-show">
+        <h2 class="main-title"><%= @nickname %>さんの商品一覧</h2>
+        <ul class="farm-item-lists">
+          <% @items.each do |item| %> 
+            <li class="farm-item-list">
+              <%= link_to item_path(item.id) do %>
+                <div class="item-img-content">
+                  <%= image_tag item.image, class: "item-images" if item.image.present? %> 
+                  <% if item.order.present? %>
+                    <div class='sold-out'> 
+                      <span>売却済み</span>
+                    </div> 
+                  <% end %>
                 </div>
-              </div>
-            <% end %>
-          </li>
-        <% end %> 
-      </ul>
+                <div class='item-info'>
+                  <h3 class='item-name'>
+                    <%= "#{item.product}" %>
+                  </h3>
+                  <div class='item-price'>
+                    <span><%= "#{item.price}" %>
+                    円<br><%= "#{item.shipping_fee.name}" %>
+                    </span>  
+                  </div>
+                </div>
+              <% end %>
+            </li>
+          <% end %> 
+        </ul>
+      </div>
     </div>
   </div>
 </div>

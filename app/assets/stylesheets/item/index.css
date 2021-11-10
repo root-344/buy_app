@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -23,7 +24,7 @@ ul, li {
   width: 100vw;
   height: 20vh;
   display: flex;
-  background-color: seashell;
+  background-color: #d0fbd0;
 }
 
 .header-bar .header-left {
@@ -46,6 +47,13 @@ ul, li {
   position: relative;
   border: 7px solid red;
   border-radius: 50%;
+  display: inline-block;
+  text-decoration: none;
+  color: red;
+  /*ボタン色と同じに*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  font-weight: bold;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
 }
 
 .header-bar .header-left #logo .logo {
@@ -57,6 +65,14 @@ ul, li {
   text-decoration: none;
   font-size: 33px;
   color: red;
+}
+
+.header-bar .header-left #logo .logo:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
 }
 
 .header-bar .header-right {
@@ -328,7 +344,7 @@ ul, li {
   height: 4vh;
   text-align: center;
   padding-top: 3px;
-  background-color: seashell;
+  background-color: #d0fbd0;
 }
 
 .footer-bar .footer-word {

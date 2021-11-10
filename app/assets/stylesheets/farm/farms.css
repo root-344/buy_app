@@ -1,9 +1,16 @@
 .farm-show-main {
   width: 90%;
+  height: 100%;
+  background-image: url("https://i.gyazo.com/0cfc702b05ee3033145f1f4882bafa8e.jpg");
+  background-size: cover;
+}
+
+.farm-show-main .farm-show-box {
+  width: 80%;
   max-width: 800px;
   min-width: 50%;
   height: 95%;
-  margin: 20px auto 20px;
+  margin: 20px auto;
   border: 3px solid black;
   border-radius: 10px;
   overflow: auto;
@@ -13,7 +20,7 @@
   width: 100%;
   height: 40%;
   border-bottom: 3px solid black;
-  background-color: blanchedalmond;
+  background-color: rgba(255, 235, 205, 0.8);
 }
 
 .farm-show-main .farm-show-status-box .farm-status {
@@ -53,7 +60,7 @@
 .farm-show-main .farm-show {
   width: 100%;
   height: 100%;
-  background-color: blanchedalmond;
+  background-color: rgba(255, 235, 205, 0.8);
 }
 
 .farm-show-main .farm-show .main-title {
