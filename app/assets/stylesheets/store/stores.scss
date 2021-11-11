@@ -17,99 +17,98 @@
     border: 3px solid black;
     border-radius: 10px;
     overflow: auto;
-  }
-  
-  .store-show-status-box {
-    width: 100%;
-    height: 40%;
-    border-bottom: 3px solid black;
-    background-color: rgba(255, 235, 205, 0.8);
+    
+    .store-show-status-box {
+      width: 100%;
+      height: 40%;
+      border-bottom: 3px solid black;
+      background-color: rgba(255, 235, 205, 0.8);
 
-    .store-status {
+      .store-status {
+        width: 100%;
+        height: 100%;
+
+        .store-nickname {
+          height: 20%;
+          text-align: center;
+        }
+        
+        .store-email {
+          height: 20%;
+          text-align: center;
+        }
+
+        .store-select-btn-container {
+          width: 20%;
+          height: 20%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 0 auto;
+          
+          .store-edit-btn {
+            height: 20%;
+            text-align: center;
+          }
+          
+          .store-delete-btn {
+            height: 20%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .store-show {
       width: 100%;
       height: 100%;
+      background-color: rgba(255, 235, 205, 0.8);
 
-      .store-nickname {
-        height: 20%;
-        text-align: center;
-      }
-      
-      .store-email {
-        height: 20%;
+      .main-title {
+        height: 5%;
         text-align: center;
       }
 
-      .store-select-btn-container {
-        width: 20%;
-        height: 20%;
+      .store-item-lists {
+        width: 90%;
+        height: 90%;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
         margin: 0 auto;
-        
-        .store-edit-btn {
-          height: 20%;
-          text-align: center;
-        }
-        
-        .store-delete-btn {
-          height: 20%;
-          text-align: center;
-        }
-      }
-    }
-  }
+        flex-wrap: wrap;
 
-  .store-show {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 235, 205, 0.8);
-
-      
-    .main-title {
-      height: 5%;
-      text-align: center;
-    }
-
-    .store-item-lists {
-      width: 90%;
-      height: 90%;
-      display: flex;
-      margin: 0 auto;
-      flex-wrap: wrap;
-
-      .store-item-list {
-        width: calc(100% / 4);
-        height: 40%;
-        margin: 20px 20px;
-        border: 2px solid black;
-        border-radius: 10px;
-        list-style: none;
-
-        .item-img-content {
-          width: 100%;
-          height: 60%;
-
-          .item-images {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px 8px 0 0;
-          }
-        }
-
-        .item-info {
-          width: 100%;
+        .store-item-list {
+          width: calc(100% / 4);
           height: 40%;
-          border-top: 1px solid black ;
+          margin: 20px 20px;
+          border: 2px solid black;
+          border-radius: 10px;
+          list-style: none;
 
-          .item-name {
+          .item-img-content {
             width: 100%;
-            height: calc(100% / 3);
+            height: 60%;
 
+            .item-images {
+              width: 100%;
+              height: 100%;
+              border-radius: 8px 8px 0 0;
+            }
           }
-          .item-price {
+
+          .item-info {
             width: 100%;
-            height: calc(100% / 1.5);
+            height: 40%;
+            border-top: 1px solid black ;
+
+            .item-name {
+              width: 100%;
+              height: calc(100% / 3);
+
+            }
+            .item-price {
+              width: 100%;
+              height: calc(100% / 1.5);
+            }
           }
         }
       }

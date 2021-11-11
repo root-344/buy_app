@@ -18,108 +18,107 @@
     border-radius: 10px;
     overflow: auto;
   
-  }
-  
-  .farm-show-status-box {
-    width: 100%;
-    height: 40%;
-    border-bottom: 3px solid black;
-    background-color: rgba(255, 235, 205, 0.8);
+    .farm-show-status-box {
+      width: 100%;
+      height: 40%;
+      border-bottom: 3px solid black;
+      background-color: rgba(255, 235, 205, 0.8);
 
-    .farm-status {
+      .farm-status {
+        width: 100%;
+        height: 100%;
+
+        .farm-nickname {
+          height: 20%;
+          text-align: center;
+        }
+        .farm-email {
+          height: 20%;
+          text-align: center;
+        }
+
+        .farm-select-btn-container {
+          width: 20%;
+          height: 20%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 0 auto;
+          .farm-edit-btn {
+            height: 20%;
+            text-align: center;
+          }
+          .farm-delete-btn {
+            height: 20%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .farm-show {
       width: 100%;
       height: 100%;
-
-      .farm-nickname {
-        height: 20%;
-        text-align: center;
-      }
-      .farm-email {
-        height: 20%;
+      background-color: rgba(255, 235, 205, 0.8);
+      
+      .main-title {
+        height: 5%;
         text-align: center;
       }
 
-      .farm-select-btn-container {
-        width: 20%;
-        height: 20%;
+      .farm-item-lists {
+        width: 90%;
+        height: 90%;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
         margin: 0 auto;
-        .farm-edit-btn {
-          height: 20%;
-          text-align: center;
-        }
-        .farm-delete-btn {
-          height: 20%;
-          text-align: center;
-        }
-      }
-    }
-  }
+        flex-wrap: wrap;
 
-  .farm-show {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 235, 205, 0.8);
-    
-    .main-title {
-      height: 5%;
-      text-align: center;
-    }
-
-    .farm-item-lists {
-      width: 90%;
-      height: 90%;
-      display: flex;
-      margin: 0 auto;
-      flex-wrap: wrap;
-
-      .farm-item-list {
-        width: calc(100% / 4);
-        height: 40%;
-        margin: 20px 20px;
-        border: 2px solid black;
-        border-radius: 10px;
-        list-style: none;
-
-        .item-img-content {
-          width: 100%;
-          height: 60%;
-          position: relative;
-          overflow: hidden;
-
-          .item-images {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px 8px 0 0;
-          }
-          .sold-out {
-            position: absolute;
-            top: 60%;
-            width: 100%;
-            height: 80%;
-            color: goldenrod;
-            font-size: 20px;
-            text-align: center;
-            background-color: crimson;
-            transform: skewY(-20deg);
-        }
-        }
-
-        .item-info {
-          width: 100%;
+        .farm-item-list {
+          width: calc(100% / 4);
           height: 40%;
-          border-top: 1px solid black ;
+          margin: 20px 20px;
+          border: 2px solid black;
+          border-radius: 10px;
+          list-style: none;
 
-          .item-name {
+          .item-img-content {
             width: 100%;
-            height: calc(100% / 3);
+            height: 60%;
+            position: relative;
+            overflow: hidden;
 
+            .item-images {
+              width: 100%;
+              height: 100%;
+              border-radius: 8px 8px 0 0;
+            }
+            .sold-out {
+              position: absolute;
+              top: 60%;
+              width: 100%;
+              height: 80%;
+              color: goldenrod;
+              font-size: 20px;
+              text-align: center;
+              background-color: crimson;
+              transform: skewY(-20deg);
           }
-          .item-price {
+          }
+
+          .item-info {
             width: 100%;
-            height: calc(100% / 1.5);
+            height: 40%;
+            border-top: 1px solid black ;
+
+            .item-name {
+              width: 100%;
+              height: calc(100% / 3);
+
+            }
+            .item-price {
+              width: 100%;
+              height: calc(100% / 1.5);
+            }
           }
         }
       }
