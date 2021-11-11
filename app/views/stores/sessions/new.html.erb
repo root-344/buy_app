@@ -3,36 +3,38 @@
   <%= render "shared/side"%>
 
   <div class="store-main">
-    <h2 class="login-title">購入者様用ログイン</h2>
-    <%= form_with model: @store, url: store_session_path, id: "new_store", class:"new_store", local: true do |f| %>
-      
-      <div class='login-flash-message'>
-        <%= flash[:notice] %>
-        <%= flash[:alert] %>
-      </div>
-      
-      <div class="form-control">
-        <%= f.label "メールアドレス" %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "t-form" %>
-      </div> 
-
-      <div class="form-control"> 
-        <%= f.label "パスワード" %><br />
-        <%= f.password_field :password, autocomplete: "current-password", class: "t-form" %>
-      </div>
-
-      <% if devise_mapping.rememberable? %>
+    <div class="login-box">
+      <h2 class="login-title">購入者様用ログイン</h2>
+      <%= form_with model: @store, url: store_session_path, id: "new_store", class:"new_store", local: true do |f| %>
+        
+        <div class='login-flash-message'>
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+        </div>
+        
         <div class="form-control">
-          <%= f.check_box :remember_me %>
-          <%= f.label "完了しました" %>
+          <%= f.label "メールアドレス" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "t-form" %>
+        </div> 
+
+        <div class="form-control"> 
+          <%= f.label "パスワード" %><br />
+          <%= f.password_field :password, autocomplete: "current-password", class: "t-form" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="form-control">
+            <%= f.check_box :remember_me %>
+            <%= f.label "完了しました" %>
+          </div>
+        <% end %>
+
+        <div class="form-control">
+        <%= f.submit "ログイン", class: "submit-btn", id: "s-s-submit" %>
+
         </div>
       <% end %>
-
-      <div class="form-control">
-      <%= f.submit "ログイン", class: "submit-btn", id: "s-s-submit" %>
-
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>
 
