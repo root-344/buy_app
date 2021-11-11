@@ -2,10 +2,9 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_side
 
-  def after_sign_in_path_for(resource)
-    items_path 
+  def after_sign_in_path_for(_resource)
+    items_path
   end
-
 
   private
 
@@ -18,5 +17,4 @@ class ApplicationController < ActionController::Base
   def set_side
     @farms = Farm.all
   end
-
 end
