@@ -6,9 +6,9 @@
   .main {
     width: 90%;
     height: 100%;
-    background-image: url('https://i.gyazo.com/f69fc1f11dd9431435b884160fc9b67e.jpg');
+    background-image: url('https://i.gyazo.com/683c848bba4baeaa217c0623c4290af1.jpg');
     background-size: cover;
-  
+
     .login-box {
       width: 50%;
       max-width: 600px;
@@ -42,6 +42,26 @@
           width: 70%;
         }
       }
+    }
+  }
+  .edit-main {
+    width: 90%;
+    height: 100%;
+    background-image: url('https://i.gyazo.com/d8c1d3fb769e959719e69c18f9f203d9.jpg');
+    background-size: cover;
+
+
+    .login-edit-box {
+      width: 50%;
+      max-width: 600px;
+      height: 70%;
+      margin: 40px auto 60px;
+      text-align: center;
+      border: 3px solid black;
+      border-radius: 10px;
+      background-color: rgba(255, 235, 205, 0.9);
+      overflow: auto;
+
     }
   }
 }
