@@ -50,7 +50,6 @@ ul, li {
   display: inline-block;
   text-decoration: none;
   color: red;
-  /*ボタン色と同じに*/
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
   font-weight: bold;
   text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
@@ -186,6 +185,7 @@ ul, li {
   background-color: white;
   border-radius: 10px;
   list-style: none;
+  z-index: 3;
 }
 
 .header-bar .header-right .header-down .user-select .farm-more-lists .more-list {
@@ -216,6 +216,7 @@ ul, li {
   background-color: white;
   border-radius: 10px;
   list-style: none;
+  z-index: 1;
 }
 
 .header-bar .header-right .header-down .user-select .store-more-lists .more-list {
@@ -249,6 +250,7 @@ ul, li {
   background-color: azure;
   border: 2px solid black;
   cursor: pointer;
+  overflow: auto;
 }
 
 .main-wrapper {
@@ -268,7 +270,8 @@ ul, li {
 .main-wrapper .item-contents .main-title {
   height: 5%;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  color: orangered;
 }
 
 .main-wrapper .item-contents .item-lists {
@@ -281,6 +284,7 @@ ul, li {
 
 .main-wrapper .item-contents .item-lists .list {
   width: calc(100% / 4);
+  min-width: 150px;
   height: 50%;
   margin: 20px 20px;
   border: 2px solid black;
