@@ -4,7 +4,7 @@
 
   <div class="store-main">
     <div class="login-box">
-      <h2 class="login-title">購入者様用新規登録画面</h2>
+      <h2 class="login-title">購入者様用新規登録</h2>
       <%= form_with model: @store, url: store_registration_path, id: "new_store", class:"new_store", local: true do |f| %>
       
       <%= render "stores/shared/error_messages", resource: resource %>
