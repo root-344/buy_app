@@ -75,6 +75,7 @@
 
         .farm-item-list {
           width: calc(100% / 4);
+          min-width: 150px;
           height: 40%;
           margin: 20px 20px;
           border: 2px solid black;
