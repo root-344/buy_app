@@ -1,6 +1,7 @@
 <div class="main-wrapper">
 
   <%= render "shared/side"%>
+  
   <div class="item-show">
     <div class="item-show-container">
       <div class="item-box">
@@ -36,7 +37,10 @@
             <% if current_store.id %>
               <%= link_to "購入する", item_orders_path(@item.id), class: "item-order-btn" %>
             <% end %>
-          <% elsif  %>
+          <% elsif @item.order != nil %>
+          <%# 何も表示しないという表示 %>
+          <%# /何も表示しないという表示 %>
+          <% else %>
               <%= link_to "売る", new_farm_session_path, class: "item-edit-btn" %>
               <p class="or-text">or</p>
               <%= link_to "買う", new_store_session_path, class: "item-destroy-btn" %>
@@ -74,18 +78,6 @@
           </tbody>
         </table>
       </div>
-      <%# /商品の概要 %>
-
-      <%# <div class="links">
-        <a href="#" class="change-item-btn">
-          ＜ 前の商品
-        </a>
-        <a href="#" class="change-item-btn">
-          後ろの商品 ＞
-        </a>
-      </div>
-      <a href="#" class="another-item"><%= "#{@item.category.name}" %>
-      <%# をもっと見る</a> %> 
     </div>
   </div>
 </div>
