@@ -21,8 +21,7 @@
 # DEMO
   
  ## トップページ（商品一覧画面） 
-[![Image from Gyazo](https://i.gyazo.com/68b83a158259c1b6ffa83d719151eb64.png)](https://gyazo.com/68b83a158259c1b6ffa83d719151eb64)
- 
+[![Image from Gyazo](https://i.gyazo.com/17c48d688e9d36c7be856afd82928ad2.jpg)](https://gyazo.com/17c48d688e9d36c7be856afd82928ad2) 
  
  ## 出品者新規登録動画
  ### 作成中
