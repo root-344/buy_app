@@ -177,67 +177,79 @@ ul, li {
 }
 
 .header-bar .header-right .header-down .user-select .farm-more-lists {
-  width: 140px;
+  width: 170px;
   height: 60px;
   position: absolute;
   top: 70%;
-  border: 1px solid lightgray;
-  background-color: white;
-  border-radius: 10px;
   list-style: none;
   z-index: 3;
 }
 
-.header-bar .header-right .header-down .user-select .farm-more-lists .more-list {
+.header-bar .header-right .header-down .user-select .farm-more-lists #list-farm-login {
   width: 100%;
   height: 50%;
+  border: 1px solid #a13232;
+  border-bottom: 1px solid #f8f6f6;
+  background-color: #a13232;
   text-align: center;
 }
 
-.header-bar .header-right .header-down .user-select .farm-more-lists .more-list .sign-up {
+.header-bar .header-right .header-down .user-select .farm-more-lists #list-farm-login .login {
   font-size: large;
-  color: black;
+  color: #dfd3d3;
   text-decoration: none;
-  border-bottom: 1px solid lightgray;
 }
 
-.header-bar .header-right .header-down .user-select .farm-more-lists .more-list .login {
+.header-bar .header-right .header-down .user-select .farm-more-lists #list-farm-sign-up {
+  width: 100%;
+  height: 50%;
+  border: 1px solid #c9f8c5;
+  background-color: #c9f8c5;
+  text-align: center;
+}
+
+.header-bar .header-right .header-down .user-select .farm-more-lists #list-farm-sign-up .sign-up {
   font-size: large;
-  color: black;
+  color: #1f1d1d;
   text-decoration: none;
-  border-bottom: 1px solid lightgray;
 }
 
 .header-bar .header-right .header-down .user-select .store-more-lists {
-  width: 140px;
+  width: 180px;
   height: 60px;
   position: absolute;
   top: 70%;
-  border: 1px solid lightgray;
-  background-color: white;
-  border-radius: 10px;
   list-style: none;
   z-index: 1;
 }
 
-.header-bar .header-right .header-down .user-select .store-more-lists .more-list {
+.header-bar .header-right .header-down .user-select .store-more-lists #list-store-login {
   width: 100%;
   height: 50%;
+  border: 1px solid #a13232;
+  border-bottom: 1px solid #f8f6f6;
+  background-color: #a13232;
   text-align: center;
 }
 
-.header-bar .header-right .header-down .user-select .store-more-lists .more-list .sign-up {
+.header-bar .header-right .header-down .user-select .store-more-lists #list-store-login .login {
   font-size: large;
-  color: black;
+  color: #dfd3d3;
   text-decoration: none;
-  border-bottom: 1px solid lightgray;
 }
 
-.header-bar .header-right .header-down .user-select .store-more-lists .more-list .login {
+.header-bar .header-right .header-down .user-select .store-more-lists #list-store-sign-up {
+  width: 100%;
+  height: 50%;
+  border: 1px solid #c9f8c5;
+  background-color: #c9f8c5;
+  text-align: center;
+}
+
+.header-bar .header-right .header-down .user-select .store-more-lists #list-store-sign-up .sign-up {
   font-size: large;
-  color: black;
+  color: #1f1d1d;
   text-decoration: none;
-  border-bottom: 1px solid lightgray;
 }
 
 .header-bar .header-right .header-down .user-select .hidden {

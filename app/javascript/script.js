@@ -4,7 +4,8 @@ window.addEventListener('load', function(){
   const farmPullDownBox = document.getElementById("farm-pull-down")
   const storePullDownButton = document.getElementById("store-select")
   const storePullDownBox = document.getElementById("store-pull-down")
-  
+  const itemBox = document.getElementById("item-box")
+
   if (!farmPullDownButton){ return false;}
   farmPullDownButton.addEventListener('mouseover', function() {
     this.setAttribute("style", "color:red;")
@@ -22,6 +23,13 @@ window.addEventListener('load', function(){
     this.removeAttribute("style", "color:red;")
   });
 
+  itemBox.addEventListener('mouseover', function() {
+    this.setAttribute("style", "color:red")
+  });
+
+  itemBox.addEventListener('mouseout', function() {
+    this.removeAttribute("style", "color:red;")
+  });
 
   farmPullDownButton.addEventListener('click', function() {
     if(storePullDownBox.getAttribute("style") == "display:block") {
