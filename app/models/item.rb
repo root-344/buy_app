@@ -8,6 +8,8 @@ class Item < ApplicationRecord
   belongs_to :farm
   has_one :order
   has_one_attached :image
+  has_many :likes, dependent: :destroy
+  has_many :like_stores, through: :likes, source: :store
   # has_many_attached :images
 
   with_options presence: true do

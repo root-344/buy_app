@@ -5,6 +5,9 @@ class Store < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :orders
+  has_many :likes, dependent: :destroy
+  has_many :like_items, through: :likes, source: :item
+
 
   with_options presence: true do
     validates :first_name
