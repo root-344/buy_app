@@ -36,4 +36,8 @@ class Store < ApplicationRecord
       validates :email
     end
   end
+
+  def liked_by?(item)
+    likes.where(item_id: item.id).exists?
+  end
 end
