@@ -5,6 +5,9 @@ class Store < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :orders
+  has_many :likes, dependent: :destroy
+  has_many :like_items, through: :likes, source: :item
+
 
   with_options presence: true do
     validates :first_name
@@ -32,5 +35,9 @@ class Store < ApplicationRecord
     with_options uniqueness: { case_sensitive: true, message: 'は既に登録されています' } do
       validates :email
     end
+  end
+
+  def liked_by?(item)
+    likes.where(item_id: item.id).exists?
   end
 end
