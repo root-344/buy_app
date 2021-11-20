@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
   resources :farms, only: :show
-  resources :stores, only: :show
+  resources :stores, only: :show do
+  end
   resources :homes, only: :index
 end
