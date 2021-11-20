@@ -26,6 +26,9 @@
             <%= "#{@item.shipping_fee.name}" %>
           </div>
         </div>
+
+        <%= render('likes/like',item: @item) %>
+
         <div class="item-command">
           <% if farm_signed_in? && @item.order == nil %>
             <% if current_farm.id == @item.farm_id %>
