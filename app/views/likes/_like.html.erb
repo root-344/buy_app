@@ -1,0 +1,13 @@
+          <div id="like-<%= @item.id %>">
+            <% if !store_signed_in? %>
+              <div class="fa fa-heart like-btn"></div>
+            <% elsif current_store.liked_by?(@item) %>
+              <%= link_to item_like_path(@item, @item.likes), class: "like-link", method: :delete, remote: true do %>
+                <div class="fa fa-heart unlike-btn">お気に入り登録を解除</div>
+              <% end %>
+            <% else %>
+              <%= link_to item_likes_path(@item), class: "like-link", method: :post, remote: true do %>
+                <div class="fa fa-heart like-btn">お気に入り登録</div>
+              <% end %>
+            <% end %>
+          </div>
