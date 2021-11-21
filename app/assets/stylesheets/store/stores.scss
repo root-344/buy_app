@@ -63,6 +63,7 @@
       width: 100%;
       height: 100%;
       background-color: rgba(255, 235, 205, 0.8);
+      border-bottom: 3px solid black;
 
       .main-title {
         height: 5%;
@@ -93,6 +94,74 @@
               width: 100%;
               height: 100%;
               border-radius: 8px 8px 0 0;
+            }
+          }
+
+          .item-info {
+            width: 100%;
+            height: 40%;
+            border-top: 1px solid black ;
+
+            .item-name {
+              width: 100%;
+              height: calc(100% / 3);
+
+            }
+            .item-price {
+              width: 100%;
+              height: calc(100% / 1.5);
+            }
+          }
+        }
+      }
+    }
+    .store-like-show {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 235, 205, 0.8);
+
+      .main-title {
+        height: 5%;
+        text-align: center;
+      }
+
+      .store-item-lists {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+
+        .store-item-list {
+          width: calc(100% / 4);
+          min-width: 150px;
+          height: 40%;
+          margin: 20px 20px;
+          border: 2px solid black;
+          border-radius: 10px;
+          list-style: none;
+
+          .item-img-content {
+            width: 100%;
+            height: 60%;
+            position: relative;
+            overflow: hidden;
+
+            .item-images {
+              width: 100%;
+              height: 100%;
+              border-radius: 8px 8px 0 0;
+            }
+            .sold-out {
+              position: absolute;
+              top: 60%;
+              width: 100%;
+              height: 80%;
+              color: goldenrod;
+              font-size: 20px;
+              text-align: center;
+              background-color: crimson;
+              transform: skewY(-20deg);
             }
           }
 
