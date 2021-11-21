@@ -47,6 +47,35 @@
               <% end %>
             </ul>
           </div>
+          <div class="store-show">
+            <h2 class="main-title"><%= @nickname %>さんのお気に入り商品一覧</h2>
+            <ul class="store-item-lists">
+              <% @like_items.each do |like| %>
+                <li class="store-item-list">
+                  <%= link_to item_path(like.id) do %>
+                    <div class="item-img-content">
+                      <%= image_tag like.image, class: "item-images"%>
+                      <% if like.order.present? %>
+                        <div class="sold-out">
+                          <span>売却済み</span>
+                        </div>
+                      <% end %>
+                    </div>
+                    <div class='item-info'>
+                      <h3 class='item-name'>
+                        <%= "#{like.product}" %>
+                      </h3>
+                      <div class='item-price'>
+                        <span><%= "#{like.price}" %>
+                        円<br><%= "#{like.shipping_fee.name}" %> 
+                        </span>  
+                      </div>
+                    </div>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
       <% end %>
     </div>

@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   end
   resources :farms, only: :show
   resources :stores, only: :show do
+    collection do
+      get 'like'
+    end
   end
   resources :homes, only: :index
 end
