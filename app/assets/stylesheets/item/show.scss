@@ -143,6 +143,11 @@
         border-radius: 5px;
         background-color: whitesmoke;
 
+        .show-farm-name {
+          text-decoration: none;
+          font-style: italic;
+        }
+
       }
     }
   }

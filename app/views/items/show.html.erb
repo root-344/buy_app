@@ -56,7 +56,9 @@
           <tbody>
             <tr>
               <th class="detail-item">出品者</th>
-              <td class="detail-value"><%= "#{@item.farm.nickname}"%></td>
+              <td class="detail-value">
+              <%= link_to "#{@item.farm.nickname}", farm_path(@item.farm.id), class: "show-farm-name" %>
+              </td>
             </tr>
             <tr>
               <th class="detail-item">カテゴリー</th>

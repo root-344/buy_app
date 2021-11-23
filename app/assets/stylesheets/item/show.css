@@ -147,3 +147,8 @@
   border-radius: 5px;
   background-color: whitesmoke;
 }
+
+.item-show .item-show-container .item-box .detail-table .show-farm-name {
+  text-decoration: none;
+  font-style: italic;
+}
