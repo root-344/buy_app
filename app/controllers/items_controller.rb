@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_item, except: [:index, :new, :create, :search]
   def index
     @items = Item.includes(:user)
-    @items = Item.page(params[:page]).per(6)
+    @items = Item.page(params[:page]).per(10)
   end
 
   def show
