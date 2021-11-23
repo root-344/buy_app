@@ -1,15 +1,25 @@
+@charset "UTF-8";
 .side {
   width: 20%;
   max-width: 250px;
-  min-width: 200px;
+  min-width: 150px;
   height: 100%;
+  text-align: center;
   background-color: #d0fbd0;
+}
+
+.side .farm-names {
+  width: 90%;
+  height: 30px;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro";
 }
 
 .side .side-names {
   width: 90%;
-  height: 100%;
-  margin: 20px auto;
+  height: 90%;
+  margin: 10px auto;
 }
 
 .side .side-names .side-name {
