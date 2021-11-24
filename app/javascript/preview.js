@@ -25,6 +25,32 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
         createImageHTML(blob);
       });
     });
+  document.addEventListener('DOMContentLoaded', function(){
+      const editList = document.getElementById('image-edit-list');
+  
+      const createImageHTML = (blob) => {
+        const imageElement = document.createElement('div');
+  
+        const blobImage = document.createElement('img');
+        blobImage.setAttribute('class', 'image-file')
+        blobImage.setAttribute('src', blob);
+  
+        imageElement.appendChild(blobImage);
+        editList.appendChild(imageElement);
+      };
+  
+      document.getElementById('item-edit-image').addEventListener('change', function(e){
+        const imageContent = document.querySelector('img');
+        if (imageContent){
+          imageContent.remove();
+        }
+  
+        const file = e.target.files[0];
+        const blob = window.URL.createObjectURL(file);
+  
+        createImageHTML(blob);
+      });
+    });
   };
 
   //複数枚画像投稿機能実装時に使用
