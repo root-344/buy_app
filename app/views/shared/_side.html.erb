@@ -9,4 +9,25 @@
         </li>
       <% end %>
     </ul>
+    <div class="date-time-box">
+      <div id="date-time"></div>
+    </div>
+    <script type="text/javascript">
+      setInterval('clock()', 500);
+      function clock() {
+        document.getElementById("date-time").innerHTML = showClock();
+      }
+      function showClock() {
+        var now = new Date();
+        var Year = now.getFullYear();
+        var Month = now.getMonth()+1;
+        var Day = now.getDate();
+        var Hour = now.getHours();
+        var Min = now.getMinutes();
+        var Sec = now.getSeconds();
+
+        var s = Year + "年" + Month + "月" + Day + "日" + Hour + ":" + Min + ":" + Sec;
+        return s;
+      }
+    </script>
   </div>
