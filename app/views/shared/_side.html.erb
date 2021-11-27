@@ -22,11 +22,14 @@
         var Year = now.getFullYear();
         var Month = now.getMonth()+1;
         var Day = now.getDate();
+        var you = now.getDay(); 
         var Hour = now.getHours();
         var Min = now.getMinutes();
         var Sec = now.getSeconds();
 
-        var s = Year + "年" + Month + "月" + Day + "日" + Hour + ":" + Min + ":" + Sec;
+        var youbi = new Array("日","月","火","水","木","金","土");
+
+        var s = Year + "年" + Month + "月" + Day + "日(" + youbi[you] + ")" + Hour + ":" + Min + ":" + Sec;
         return s;
       }
     </script>
