@@ -20,12 +20,12 @@
       function showClock() {
         var now = new Date();
         var Year = now.getFullYear();
-        var Month = now.getMonth()+1;
-        var Day = now.getDate();
+        var Month = ("0" + (now.getMonth()+1)).slice(-2);
+        var Day = ("0" + now.getDate()).slice(-2);
         var you = now.getDay(); 
-        var Hour = now.getHours();
-        var Min = now.getMinutes();
-        var Sec = now.getSeconds();
+        var Hour = ("0" + now.getHours()).slice(-2);
+        var Min = ("0" + now.getMinutes()).slice(-2);
+        var Sec = ("0" + now.getSeconds()).slice(-2);
 
         var youbi = new Array("日","月","火","水","木","金","土");
 
