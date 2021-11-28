@@ -5,7 +5,6 @@
   min-width: 150px;
   height: 100%;
   text-align: center;
-  overflow: auto;
   background-color: #d0fbd0;
 }
 
@@ -47,5 +46,5 @@
 }
 
 .side .date-time-box #date-time {
-  font-size: 15px;
+  font-size: 14px;
 }

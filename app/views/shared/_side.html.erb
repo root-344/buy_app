@@ -27,7 +27,9 @@
         var Min = ("0" + now.getMinutes()).slice(-2);
         var Sec = ("0" + now.getSeconds()).slice(-2);
 
-        var s = Year + "年" + Month + "月" + Day + "日" + Hour + ":" + Min + ":" + Sec;
+        var youbi = new Array("日","月","火","水","木","金","土");
+
+        var s = Year + "年" + Month + "月" + Day + "日(" + youbi[you] + ")" + Hour + ":" + Min + ":" + Sec;
         return s;
       }
     </script>
