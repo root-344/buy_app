@@ -8,7 +8,6 @@ class Store < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :like_items, through: :likes, source: :item
 
-
   with_options presence: true do
     validates :first_name
     validates :last_name

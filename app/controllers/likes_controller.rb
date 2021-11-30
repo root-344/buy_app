@@ -2,7 +2,6 @@ class LikesController < ApplicationController
   before_action :move_to_index, only: [:create, :destroy]
   before_action :set_item, only: [:create, :destroy]
 
-
   def create
     @like = Like.create(item_id: @item.id, store_id: current_store.id)
   end
@@ -12,7 +11,7 @@ class LikesController < ApplicationController
     @like.destroy
   end
 
-private
+  private
 
   def move_to_index
     redirect_to action: :index unless store_signed_in?
@@ -21,5 +20,4 @@ private
   def set_item
     @item = Item.find(params[:item_id])
   end
-
 end
