@@ -7,20 +7,23 @@
       <% if farm_signed_in?%>
         <div class="farm-show-status-box">
           <div class="farm-status">
+            <div class="item-img-content">
+              <%= image_tag @image, class:"item-box-img" %>
+            </div>
             <h2 class="farm-nickname"> 
               <%= @nickname %>
             </h2>
-            <p class="farm-email">
-              <%= @email %>
-            </p>
             <% if @email == current_farm.email %>
+              <p class="farm-email">
+                <%= @email %>
+              </p>
               <div class="farm-select-btn-container">
-                <%# <div class="farm-edit-btn">
-                  <%= link_to "編集", "/farms/edit" %> 
-                <%# </div>  %>
-                <%# <div class="farm-delete-btn"> %>
-                  <%# <%= link_to "退会", farm_registration_path, method: :delete %>
-                <%# </div> %>
+                <div class="farm-edit-btn">
+                  <%= link_to "編集", "/farms/edit" %>
+                </div> 
+                <div class="farm-delete-btn">
+                  <%= link_to "退会", farm_registration_path, method: :delete %>
+                </div>
               </div>
             <% end %> 
           </div>

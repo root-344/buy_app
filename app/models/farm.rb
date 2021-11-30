@@ -5,6 +5,7 @@ class Farm < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :items, dependent: :destroy
+  has_one_attached :image
 
   with_options presence: true do
     validates :first_name

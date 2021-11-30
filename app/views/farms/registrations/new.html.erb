@@ -9,6 +9,16 @@
       
         <%= render "farms/shared/error_messages", resource: resource %>
 
+        <div class="img-upload">
+          <div class="weight-bold-text">
+            出品者様イメージ画像
+          </div>
+          <div class="click-upload" >
+            <%= f.file_field :image, id: "farm-image" %>
+          </div>
+        </div>
+        <div id="farm-image-list"></div>
+        <% image_tag @image, id: "farm-image-file" if @image.present? %>
         <div class="form-control">
           <%= f.label "姓（漢字）" %><br />
           <%= f.text_field :first_name, autofocus: true, class: "t-form", maxlength: "6" %>
