@@ -7,6 +7,7 @@ class Store < ApplicationRecord
   has_many :orders
   has_many :likes, dependent: :destroy
   has_many :like_items, through: :likes, source: :item
+  has_one_attached :image
 
   with_options presence: true do
     validates :first_name

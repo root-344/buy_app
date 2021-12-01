@@ -54,7 +54,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
       });
     });
 
-  // ユーザー画像（新規登録）
+  // 出品者画像（新規登録）
     document.addEventListener('DOMContentLoaded', function(){
       const farmImageList = document.getElementById('farm-image-list');
 
@@ -81,7 +81,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
         createImageHTML(blob);
       });
     });
-  // ユーザ画像（編集）  
+  // 出品者画像（編集）  
     document.addEventListener('DOMContentLoaded', function(){
       const farmEditList = document.getElementById('farm-edit-image-list');
 
@@ -97,6 +97,61 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
       };
 
       document.getElementById('farm-edit-image').addEventListener('change', function(e){
+        const imageContent = document.querySelector('img');
+        if (imageContent){
+          imageContent.remove();
+        }
+
+        const file = e.target.files[0];
+        const blob = window.URL.createObjectURL(file);
+
+        createImageHTML(blob);
+      });
+    });
+
+    // 購入者画像（新規登録）
+    document.addEventListener('DOMContentLoaded', function(){
+      const storeImageList = document.getElementById('store-image-list');
+
+      const createImageHTML = (blob) => {
+        const imageElement = document.createElement('div');
+
+        const blobImage = document.createElement('img');
+        blobImage.setAttribute('class', 'image-file')
+        blobImage.setAttribute('src', blob);
+
+        imageElement.appendChild(blobImage);
+        storeImageList.appendChild(imageElement);
+      };
+
+      document.getElementById('store-image').addEventListener('change', function(e){
+        const farmImageContent = document.querySelector('img');
+        if (farmImageContent){
+          farmImageContent.remove();
+        }
+
+        const File = e.target.files[0];
+        const blob = window.URL.createObjectURL(File);
+
+        createImageHTML(blob);
+      });
+    });
+  // 購入者画像（編集）  
+    document.addEventListener('DOMContentLoaded', function(){
+      const storeEditList = document.getElementById('store-edit-image-list');
+
+      const createImageHTML = (blob) => {
+        const imageElement = document.createElement('div');
+
+        const blobImage = document.createElement('img');
+        blobImage.setAttribute('class', 'image-file')
+        blobImage.setAttribute('src', blob);
+
+        imageElement.appendChild(blobImage);
+        storeEditList.appendChild(imageElement);
+      };
+
+      document.getElementById('store-edit-image').addEventListener('change', function(e){
         const imageContent = document.querySelector('img');
         if (imageContent){
           imageContent.remove();
