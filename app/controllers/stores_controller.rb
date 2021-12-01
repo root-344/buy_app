@@ -6,6 +6,7 @@ class StoresController < ApplicationController
     @email = store.email
     @orders = store.orders
     @items = store.item_id
+    @image = store.image
     likes = Like.where(store_id: store.id).pluck(:item_id)
     @like_items = Item.find(likes)
   end
