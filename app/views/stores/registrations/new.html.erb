@@ -8,6 +8,17 @@
       <%= form_with model: @store, url: store_registration_path, id: "new_store", class:"new_store", local: true do |f| %>
       
       <%= render "stores/shared/error_messages", resource: resource %>
+     
+        <div class="img-upload">
+          <div class="weight-bold-text">
+            出品者様イメージ画像
+          </div>
+          <div class="click-upload" >
+            <%= f.file_field :image, id: "store-image" %>
+          </div>
+        </div>
+        <div id="store-image-list"></div>
+        <% image_tag @image, id: "store-image-file" if @image.present? %>
 
         <div class="form-control">
           <%= f.label "姓（漢字）" %><br />
