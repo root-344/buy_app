@@ -7,6 +7,9 @@
         <% if @email == current_store.email %>
           <div class="store-show-status-box">
             <div class="store-status">
+              <div class="item-img-content">
+                <%= image_tag @image, class:"item-box-img" %>
+              </div>
               <h2 class="store-nickname"> 
                 <%= @nickname %>
               </h2>
@@ -14,12 +17,12 @@
                 <%= @email %>
               </p>
               <div class="store-select-btn-container">
-                <%# <div class="store-edit-btn">
+                <div class="store-edit-btn">
                   <%= link_to "編集", "/stores/edit" %>
-                <%# </div>  %>
-                <%# <div class="store-delete-btn">
+                </div> 
+                <div class="store-delete-btn">
                   <%= link_to "退会", store_registration_path, method: :delete %>
-                <%# </div> %>
+                </div>
               </div>
             </div>
           </div>
