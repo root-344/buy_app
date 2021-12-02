@@ -19,26 +19,28 @@
         </div>
         <div id="farm-image-list"></div>
         <% image_tag @image, id: "farm-image-file" if @image.present? %>
-        <div class="form-control">
-          <%= f.label "姓（漢字）" %><br />
-          <%= f.text_field :first_name, autofocus: true, class: "t-form", maxlength: "6" %>
-        </div> 
+        <div class="form-container">
+          <div class="form-control form-name">
+            <%= f.label "姓（漢字）" %><br />
+            <%= f.text_field :first_name, autofocus: true, class: "t-form", maxlength: "6" %>
+          </div> 
 
-        <div class="form-control">
-          <%= f.label "名（漢字）" %><br />
-          <%= f.text_field :last_name, class: "t-form", maxlength: "6" %>
-        </div> 
+          <div class="form-control form-name">
+            <%= f.label "名（漢字）" %><br />
+            <%= f.text_field :last_name, class: "t-form", maxlength: "6" %>
+          </div> 
+        </div>
+        <div class="form-container">
+          <div class="form-control form-name">
+            <%= f.label "姓（カナ）" %><br />
+            <%= f.text_field :first_name_kana, class: "t-form", maxlength: "10" %>
+          </div> 
 
-        <div class="form-control">
-          <%= f.label "姓（カナ）" %><br />
-          <%= f.text_field :first_name_kana, class: "t-form", maxlength: "10" %>
-        </div> 
-
-        <div class="form-control">
-          <%= f.label "名（カナ）" %><br />
-          <%= f.text_field :last_name_kana, class: "t-form", maxlength: "10" %>
-        </div> 
-
+          <div class="form-control form-name">
+            <%= f.label "名（カナ）" %><br />
+            <%= f.text_field :last_name_kana, class: "t-form", maxlength: "10" %>
+          </div> 
+        </div>
         <div class="form-control">
           <%= f.label "表示名" %><br />
           <%= f.text_field :nickname, class: "t-form", maxlength: "10" %>
