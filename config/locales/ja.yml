@@ -2,6 +2,7 @@ ja:
   activerecord:
     attributes:
       farm:
+        image: イメージ画像
         email: メールアドレス
         password: パスワード
         password_confirmation: 確認用パスワード
@@ -11,6 +12,7 @@ ja:
         last_name_kana: 姓（カナ）
         first_name_kana: 名（カナ）
       store:
+        image: イメージ画像
         email: メールアドレス
         password: パスワード
         password_confirmation: 確認用パスワード
