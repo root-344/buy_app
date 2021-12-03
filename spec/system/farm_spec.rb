@@ -16,6 +16,8 @@ RSpec.describe 'Farms', type: :system do
     # 新規登録ページに移動する
     visit new_farm_registration_path
     # 出品者情報を入力する
+    image_path = Rails.root.join('public/images/image.png')
+    attach_file('farm[image]', image_path, make_visible: true)
     fill_in 'farm_first_name', with: @farm.first_name
     fill_in 'farm_last_name', with: @farm.last_name
     fill_in 'farm_first_name_kana', with: @farm.first_name_kana
@@ -34,8 +36,6 @@ RSpec.describe 'Farms', type: :system do
     expect(page).to have_content("#{@farm.nickname}さん")
     # トップページにログアウトボタンが表示される事を確認する
     expect(page).to have_content('ログアウト')
-    # トップページに退会ボタンが表示される事を確認する
-    expect(page).to have_content('退会')
     # トップページに商品一覧ボタンが表示される事を確認する
     expect(page).to have_content('商品一覧')
     # トップページに出品ボタンが表示される事を確認する
@@ -100,8 +100,6 @@ RSpec.describe 'Farms', type: :system do
     expect(page).to have_content("#{@farm.nickname}さん")
     # トップページにログアウトボタンが表示される事を確認する
     expect(page).to have_content('ログアウト')
-    # トップページに退会ボタンが表示される事を確認する
-    expect(page).to have_content('退会')
     # トップページに商品一覧ボタンが表示される事を確認する
     expect(page).to have_content('商品一覧')
     # トップページに出品ボタンが表示される事を確認する
