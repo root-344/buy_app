@@ -10,6 +10,7 @@ class Store < ApplicationRecord
   has_one_attached :image
 
   with_options presence: true do
+    validates :image
     validates :first_name
     validates :last_name
     validates :first_name_kana
