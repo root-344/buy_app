@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :store do
     nickname { 'test' }
     email { Faker::Internet.unique.free_email }
-    password { 'a1' + Faker::Internet.password(min_length: 6) }
+    password { Faker::Lorem.characters(number: 6, min_alpha: 1, min_numeric: 1) }
     password_confirmation { password }
     gimei = Gimei.name
     last_name { gimei.last.kanji }
@@ -13,6 +13,5 @@ FactoryBot.define do
     after(:build) do |store|
       store.image.attach(io: File.open('public/images/image.png'), filename: 'image.png')
     end
-
   end
 end

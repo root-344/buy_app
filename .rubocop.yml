@@ -24,6 +24,7 @@ Layout/LineLength:
 Metrics/BlockLength:
  Exclude:
    - "spec/**/*"
+ Max: 50
 
 # Assignment: 変数への代入
 # Branch: メソッド呼び出し
