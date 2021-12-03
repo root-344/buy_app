@@ -12,6 +12,11 @@ RSpec.describe Farm, type: :model do
       end
     end
     context '新規登録できない時' do
+      it 'imageを一枚投稿しない場合出品できない' do
+        @farm.image = nil
+        @farm.valid?
+        expect(@farm.errors.full_messages).to include('イメージ画像を入力してください')
+      end
       it 'emailを入力しない場合新規登録できない' do
         @farm.email = nil
         @farm.valid?
