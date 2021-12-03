@@ -16,6 +16,8 @@ RSpec.describe 'Stores', type: :system do
     # 新規登録ページに移動する
     visit new_store_registration_path
     # 購入者情報を入力する
+    image_path = Rails.root.join('public/images/image.png')
+    attach_file('store[image]', image_path, make_visible: true)
     fill_in 'store_first_name', with: @store.first_name
     fill_in 'store_last_name', with: @store.last_name
     fill_in 'store_first_name_kana', with: @store.first_name_kana
@@ -34,8 +36,6 @@ RSpec.describe 'Stores', type: :system do
     expect(page).to have_content("#{@store.nickname}さん")
     # トップページにログアウトボタンが表示される事を確認する
     expect(page).to have_content('ログアウト')
-    # トップページに退会ボタンが表示される事を確認する
-    expect(page).to have_content('退会')
     # トップページに商品一覧ボタンが表示される事を確認する
     expect(page).to have_content('商品一覧')
     # トップページに出品者専用ボタンがない事を確認する
@@ -100,8 +100,6 @@ RSpec.describe 'Stores', type: :system do
     expect(page).to have_content("#{@store.nickname}さん")
     # トップページにログアウトボタンが表示される事を確認する
     expect(page).to have_content('ログアウト')
-    # トップページに退会ボタンが表示される事を確認する
-    expect(page).to have_content('退会')
     # トップページに商品一覧ボタンが表示される事を確認する
     expect(page).to have_content('商品一覧')
     # トップページに出品者専用ボタンがない事を確認する
