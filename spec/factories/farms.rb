@@ -9,5 +9,10 @@ FactoryBot.define do
     first_name { gimei.first.kanji }
     last_name_kana { gimei.last.katakana }
     first_name_kana { gimei.first.katakana }
+
+    after(:build) do |farm|
+      farm.image.attach(io: File.open('public/images/image.png'), filename: 'image.png')
+    end
+
   end
 end

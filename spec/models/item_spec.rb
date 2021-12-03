@@ -76,17 +76,17 @@ RSpec.describe Item, type: :model do
       it 'priceが9以下の場合出品できない' do
         @item.price = 9
         @item.valid?
-        expect(@item.errors.full_messages).to include('値段は9~9,999,999の半角数字で入力してください')
+        expect(@item.errors.full_messages).to include('値段は50~9,999,999の半角数字で入力してください')
       end
       it 'priceが10,000,000より大きい場合出品できない' do
         @item.price = 10_000_001
         @item.valid?
-        expect(@item.errors.full_messages).to include('値段は9~9,999,999の半角数字で入力してください')
+        expect(@item.errors.full_messages).to include('値段は50~9,999,999の半角数字で入力してください')
       end
       it 'priceが半角数字でない場合出品できない' do
         @item.price = '１１１'
         @item.valid?
-        expect(@item.errors.full_messages).to include('値段は9~9,999,999の半角数字で入力してください')
+        expect(@item.errors.full_messages).to include('値段は50~9,999,999の半角数字で入力してください')
       end
       it 'imageを一枚投稿しない場合出品できない' do
         @item.image = nil
