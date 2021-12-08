@@ -1,0 +1,7 @@
+.error-alert {
+  width: 100%;
+}
+
+.error-alert .error-message {
+  color: red;
+}
