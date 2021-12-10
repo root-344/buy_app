@@ -147,3 +147,7 @@
   width: 60%;
   height: 60%;
 }
+
+.main-wrapper #error_explanation {
+  color: red;
+}
