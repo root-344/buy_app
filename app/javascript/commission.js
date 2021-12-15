@@ -1,5 +1,7 @@
-window.addEventListener('load', () =>{
+function commission() {
+  
   const priceInput = document.getElementById("item-price");
+  if (!priceInput){ return false;}
   priceInput.addEventListener('input', () =>{
     const inputValue = priceInput.value;
     console.log(inputValue)
@@ -12,4 +14,5 @@ window.addEventListener('load', () =>{
     profitNumber.innerHTML = (Math.floor(inputValue - value_result));
       
   });
-});
+};
+window.addEventListener('load', commission) 
