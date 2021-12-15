@@ -10,19 +10,7 @@ RSpec.describe 'OrderAddresses', type: :system do
   #   # トップページに移動する
   #   visit items_path
   #   # 購入者がログインする
-  #     # トップページに移動する
-  #     visit items_path
-  #     # ログインページに移動する
-  #     visit new_store_session_path
-  #     # 出品者情報を入力する
-  #     fill_in 'store_email', with: @store.email
-  #     fill_in 'store_password', with: @store.password
-  #     # ログインボタンを押してもfarmテーブルにレコード追加されない事を確認する
-  #     expect{
-  #       find('input[value="ログイン"]').click
-  #     }.to change { Farm.count }.by(0)
-  #     # トップページに移動した事を確認する
-  #     expect(current_path).to eq(items_path)
+  #   store_sign_in(@store)
   #   # トップページに商品が存在する事を確認する
   #   expect(page).to have_selector('img')
   #   # 商品詳細ページに移動する

@@ -17,7 +17,7 @@ module SignInSupport
   end
 
   # 購入者
-  def sign_in(_store)
+  def store_sign_in(_store)
     # トップページに移動する
     visit items_path
     # ログインページに移動する
