@@ -1,149 +1,298 @@
 // Place all the styles related to the farms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@media screen and (min-width: 717px) {
 
-.farm-show-main {
-  width: 90%;
-  height: 100%;
-  background-image: url('https://i.gyazo.com/0cfc702b05ee3033145f1f4882bafa8e.jpg');
-  background-size: cover;
+  .farm-show-main {
+    width: 90%;
+    height: 100%;
+    background-image: url('https://i.gyazo.com/0cfc702b05ee3033145f1f4882bafa8e.jpg');
+    background-size: cover;
 
-  .farm-show-box {
-    width: 80%;
-    max-width: 800px;
-    min-width: 50%;
-    height: 95%;
-    margin: 20px auto;
-    border: 3px solid black;
-    border-radius: 10px;
-    overflow: auto;
-  
-    .farm-show-status-box {
-      width: 100%;
-      height: 80%;
-      border-bottom: 3px solid black;
-      background-color: rgba(255, 235, 205, 0.8);
-
-      .farm-status {
+    .farm-show-box {
+      width: 80%;
+      max-width: 800px;
+      min-width: 50%;
+      height: 95%;
+      margin: 20px auto;
+      border: 3px solid black;
+      border-radius: 10px;
+      overflow: auto;
+    
+      .farm-show-status-box {
         width: 100%;
-        height: 100%;
+        height: 80%;
+        border-bottom: 3px solid black;
+        background-color: rgba(255, 235, 205, 0.8);
 
-        .item-img-content {
-          width: 200px;
-          min-width: 100px;
-          height: 200px;
-          min-height: 100px;
-          margin: 0 auto;
-  
-          .item-box-img {
-            width: 100%;
-            height: 100%;
-            margin: 20px 0;
-            border-radius: 50%;
-          }
-        }
-          
-        .farm-nickname {
-          height: 12%;
-          text-align: center;
-          font-size: 30px;
-          color: rgb(90, 90, 196);
-          background-color: yellowgreen;
-        }
-        .farm-email {
-          height: 10%;
-          text-align: center;
-          font-size: 18px;
-        }
-
-        .farm-select-btn-container {
-          width: 20%;
-          height: 10%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          margin: 0 auto;
-          
-          .farm-edit-btn {
-            height: 10%;
-            text-align: center;
-          }
-          
-          .farm-delete-btn {
-            height: 10%;
-            text-align: center;
-          }
-        }
-      }
-    }
-
-    .farm-show {
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 235, 205, 0.8);
-      
-      .main-title {
-        height: 5%;
-        text-align: center;
-      }
-
-      .farm-item-lists {
-        width: 90%;
-        height: 90%;
-        display: flex;
-        margin: 0 auto;
-        flex-wrap: wrap;
-
-        .farm-item-list {
-          width: calc(100% / 4);
-          min-width: 150px;
-          height: 40%;
-          margin: 20px 20px;
-          border: 2px solid black;
-          border-radius: 10px;
-          list-style: none;
+        .farm-status {
+          width: 100%;
+          height: 100%;
 
           .item-img-content {
-            width: 100%;
-            height: 60%;
-            position: relative;
-            overflow: hidden;
-
-            .item-images {
+            width: 200px;
+            min-width: 100px;
+            height: 200px;
+            min-height: 100px;
+            margin: 0 auto;
+    
+            .item-box-img {
               width: 100%;
               height: 100%;
-              border-radius: 8px 8px 0 0;
+              margin: 20px 0;
+              border-radius: 50%;
             }
-            .sold-out {
-              position: absolute;
-              top: 60%;
-              width: 100%;
-              height: 80%;
-              color: goldenrod;
-              font-size: 20px;
+          }
+            
+          .farm-nickname {
+            height: 12%;
+            text-align: center;
+            font-size: 30px;
+            color: rgb(90, 90, 196);
+            background-color: yellowgreen;
+          }
+          .farm-email {
+            height: 10%;
+            text-align: center;
+            font-size: 18px;
+          }
+
+          .farm-select-btn-container {
+            width: 20%;
+            height: 10%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            
+            .farm-edit-btn {
+              height: 10%;
               text-align: center;
-              background-color: crimson;
-              transform: skewY(-20deg);
-          }
-          }
-
-          .item-info {
-            width: 100%;
-            height: 40%;
-            border-top: 1px solid black ;
-
-            .item-name {
-              width: 100%;
-              height: calc(100% / 3);
-
             }
-            .item-price {
+            
+            .farm-delete-btn {
+              height: 10%;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .farm-show {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 235, 205, 0.8);
+        
+        .main-title {
+          height: 5%;
+          text-align: center;
+        }
+
+        .farm-item-lists {
+          width: 90%;
+          height: 90%;
+          display: flex;
+          margin: 0 auto;
+          flex-wrap: wrap;
+
+          .farm-item-list {
+            width: calc(100% / 4);
+            min-width: 150px;
+            height: 40%;
+            margin: 20px 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            list-style: none;
+
+            .item-img-content {
               width: 100%;
-              height: calc(100% / 1.5);
+              height: 60%;
+              position: relative;
+              overflow: hidden;
+
+              .item-images {
+                width: 100%;
+                height: 100%;
+                border-radius: 8px 8px 0 0;
+              }
+              .sold-out {
+                position: absolute;
+                top: 60%;
+                width: 100%;
+                height: 80%;
+                color: goldenrod;
+                font-size: 20px;
+                text-align: center;
+                background-color: crimson;
+                transform: skewY(-20deg);
+            }
+            }
+
+            .item-info {
+              width: 100%;
+              height: 40%;
+              border-top: 1px solid black ;
+
+              .item-name {
+                width: 100%;
+                height: calc(100% / 3);
+
+              }
+              .item-price {
+                width: 100%;
+                height: calc(100% / 1.5);
+              }
             }
           }
         }
       }
     }
   }
+}
+@media screen and (max-width: 716px) {
+  .farm-show-main {
+    width: 90%;
+    height: 100%;
+    background-image: url('https://i.gyazo.com/0cfc702b05ee3033145f1f4882bafa8e.jpg');
+    background-size: cover;
+  
+    .farm-show-box {
+      width: 80%;
+      max-width: 800px;
+      min-width: 50%;
+      height: 95%;
+      margin: 20px auto;
+      border: 3px solid black;
+      border-radius: 10px;
+      overflow: auto;
+    
+      .farm-show-status-box {
+        width: 100%;
+        height: 80%;
+        border-bottom: 3px solid black;
+        background-color: rgba(255, 235, 205, 0.8);
+  
+        .farm-status {
+          width: 100%;
+          height: 100%;
+  
+          .item-img-content {
+            width: 200px;
+            min-width: 100px;
+            height: 200px;
+            min-height: 100px;
+            margin: 0 auto;
+    
+            .item-box-img {
+              width: 100%;
+              height: 100%;
+              margin: 20px 0;
+              border-radius: 50%;
+            }
+          }
+            
+          .farm-nickname {
+            height: 12%;
+            text-align: center;
+            font-size: 30px;
+            color: rgb(90, 90, 196);
+            background-color: yellowgreen;
+          }
+          .farm-email {
+            height: 10%;
+            text-align: center;
+            font-size: 18px;
+          }
+  
+          .farm-select-btn-container {
+            width: 20%;
+            height: 10%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            
+            .farm-edit-btn {
+              height: 10%;
+              text-align: center;
+            }
+            
+            .farm-delete-btn {
+              height: 10%;
+              text-align: center;
+            }
+          }
+        }
+      }
+  
+      .farm-show {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 235, 205, 0.8);
+        
+        .main-title {
+          height: 5%;
+          text-align: center;
+        }
+  
+        .farm-item-lists {
+          width: 90%;
+          height: 90%;
+          display: flex;
+          margin: 0 auto;
+          flex-wrap: wrap;
+  
+          .farm-item-list {
+            width: calc(100% / 4);
+            min-width: 150px;
+            height: 40%;
+            margin: 20px 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            list-style: none;
+  
+            .item-img-content {
+              width: 100%;
+              height: 60%;
+              position: relative;
+              overflow: hidden;
+  
+              .item-images {
+                width: 100%;
+                height: 100%;
+                border-radius: 8px 8px 0 0;
+              }
+              .sold-out {
+                position: absolute;
+                top: 60%;
+                width: 100%;
+                height: 80%;
+                color: goldenrod;
+                font-size: 20px;
+                text-align: center;
+                background-color: crimson;
+                transform: skewY(-20deg);
+            }
+            }
+  
+            .item-info {
+              width: 100%;
+              height: 40%;
+              border-top: 1px solid black ;
+  
+              .item-name {
+                width: 100%;
+                height: calc(100% / 3);
+  
+              }
+              .item-price {
+                width: 100%;
+                height: calc(100% / 1.5);
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
 }

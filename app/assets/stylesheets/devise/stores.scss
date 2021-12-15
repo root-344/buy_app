@@ -1,146 +1,296 @@
-.main-wrapper {
-  width: 100vw;
-  height: 86vh;
+@media screen and (min-width: 717px) {
+  .main-wrapper {
+    width: 100vw;
+    height: 86vh;
 
-  .store-main {
-    width: 90%;
-    height: 100%;
-    background-image: url('https://i.gyazo.com/683c848bba4baeaa217c0623c4290af1.jpg');
-    background-size: cover;
-  
-    .login-box {
-      width: 50%;
-      max-width: 500px;
-      min-width: 300px;
-      height: 70%;
-      margin: 40px auto 60px;
-      border: 3px solid black;
-      border-radius: 10px;
-      background-color: rgba(224, 250, 250, 0.7);
-      overflow: auto;
+    .store-main {
+      width: 90%;
+      height: 100%;
+      background-image: url('https://i.gyazo.com/683c848bba4baeaa217c0623c4290af1.jpg');
+      background-size: cover;
+    
+      .login-box {
+        width: 50%;
+        max-width: 500px;
+        min-width: 300px;
+        height: 70%;
+        margin: 40px auto 60px;
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: rgba(224, 250, 250, 0.7);
+        overflow: auto;
 
-      .login-title {
-        margin: 10px auto 0;
-        text-align: center;
-        font-size: 25px;
-      }
-
-      .img-upload {
-        width: 100%;
-        height: 80px;
-        text-align: center;
-        margin-top: 20px;
-
-        .weight-bold-text {
-          width: 100%;
-          height: 30px;
-          font-size: 15px;
-          font-weight: bolder;
+        .login-title {
+          margin: 10px auto 0;
+          text-align: center;
+          font-size: 25px;
         }
 
-        .click-upload {
+        .img-upload {
           width: 100%;
-          height: 50px;
-          
-          #store-image {
-            width: 70%;
-            height: 100%;
-            margin: 0 auto;
+          height: 80px;
+          text-align: center;
+          margin-top: 20px;
+
+          .weight-bold-text {
+            width: 100%;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bolder;
+          }
+
+          .click-upload {
+            width: 100%;
+            height: 50px;
+            
+            #store-image {
+              width: 70%;
+              height: 100%;
+              margin: 0 auto;
+            }
+          }
+        } 
+        
+        #store-image-list {
+          margin: 0 auto;
+        }
+          .image-file {
+            width: 60%;
+            height: 60%;
+            margin-left: 100px;
+          }
+
+
+        .login-flash-message {
+        margin: 0 auto;
+        text-align: center;
+        color: red;
+        }
+
+        .form-container {
+          width: 100%;
+          height: 20%;
+          display: flex;
+
+          .form-name {
+            width: 100%;
+            height: 20%;
+            margin: 10px auto 0;
+            text-align: center;
           }
         }
-      } 
-      
-      #store-image-list {
-        margin: 0 auto;
-      }
-        .image-file {
-          width: 60%;
-          height: 60%;
-          margin-left: 100px;
-        }
-
-
-      .login-flash-message {
-      margin: 0 auto;
-      text-align: center;
-      color: red;
-      }
-
-      .form-container {
-        width: 100%;
-        height: 20%;
-        display: flex;
-
-        .form-name {
+        .form-control {
           width: 100%;
           height: 20%;
           margin: 10px auto 0;
           text-align: center;
-        }
-      }
-      .form-control {
-        width: 100%;
-        height: 20%;
-        margin: 10px auto 0;
-        text-align: center;
 
-        .t-form {
-          width: 70%;
-        }
-      }
-    }
-  }
-  .store-edit-main {
-    width: 90%;
-    height: 100%;
-    background-image: url('https://i.gyazo.com/d8c1d3fb769e959719e69c18f9f203d9.jpg');
-    background-size: cover;
-  
-
-    .login-edit-box {
-      width: 50%;
-      max-width: 500px;
-      min-width: 300px;
-      height: 70%;
-      margin: 40px auto 60px;
-      text-align: center;
-      border: 3px solid black;
-      border-radius: 10px;
-      background-color: rgba(224, 250, 250, 0.9);
-      overflow: auto;
-
-      .img-upload {
-        width: 100%;
-        height: 80px;
-        text-align: center;
-        margin-top: 20px;
-
-        .weight-bold-text {
-          width: 100%;
-          height: 30px;
-          font-size: 15px;
-          font-weight: bolder;
-        }
-
-        .click-upload {
-          width: 100%;
-          height: 50px;
-          
-          #store-edit-image {
+          .t-form {
             width: 70%;
-            height: 100%;
-            margin: 0 auto;
           }
         }
-      } 
-      
-      #store-edit-image-list {
-        margin: 0 auto;
       }
-        .image-file {
-          width: 60%;
-          height: 60%;
+    }
+    .store-edit-main {
+      width: 90%;
+      height: 100%;
+      background-image: url('https://i.gyazo.com/d8c1d3fb769e959719e69c18f9f203d9.jpg');
+      background-size: cover;
+    
+
+      .login-edit-box {
+        width: 50%;
+        max-width: 500px;
+        min-width: 300px;
+        height: 70%;
+        margin: 40px auto 60px;
+        text-align: center;
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: rgba(224, 250, 250, 0.9);
+        overflow: auto;
+
+        .img-upload {
+          width: 100%;
+          height: 80px;
+          text-align: center;
+          margin-top: 20px;
+
+          .weight-bold-text {
+            width: 100%;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bolder;
+          }
+
+          .click-upload {
+            width: 100%;
+            height: 50px;
+            
+            #store-edit-image {
+              width: 70%;
+              height: 100%;
+              margin: 0 auto;
+            }
+          }
+        } 
+        
+        #store-edit-image-list {
+          margin: 0 auto;
         }
+          .image-file {
+            width: 60%;
+            height: 60%;
+          }
+      }
     }
   }
+}
+@media screen and (max-width: 716px) {
+  .main-wrapper {
+    width: 100vw;
+    height: 86vh;
+  
+    .store-main {
+      width: 90%;
+      height: 100%;
+      background-image: url('https://i.gyazo.com/683c848bba4baeaa217c0623c4290af1.jpg');
+      background-size: cover;
+    
+      .login-box {
+        width: 50%;
+        max-width: 500px;
+        min-width: 300px;
+        height: 70%;
+        margin: 40px auto 60px;
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: rgba(224, 250, 250, 0.7);
+        overflow: auto;
+  
+        .login-title {
+          margin: 10px auto 0;
+          text-align: center;
+          font-size: 25px;
+        }
+  
+        .img-upload {
+          width: 100%;
+          height: 80px;
+          text-align: center;
+          margin-top: 20px;
+  
+          .weight-bold-text {
+            width: 100%;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bolder;
+          }
+  
+          .click-upload {
+            width: 100%;
+            height: 50px;
+            
+            #store-image {
+              width: 70%;
+              height: 100%;
+              margin: 0 auto;
+            }
+          }
+        } 
+        
+        #store-image-list {
+          margin: 0 auto;
+        }
+          .image-file {
+            width: 60%;
+            height: 60%;
+            margin-left: 100px;
+          }
+  
+  
+        .login-flash-message {
+        margin: 0 auto;
+        text-align: center;
+        color: red;
+        }
+  
+        .form-container {
+          width: 100%;
+          height: 20%;
+          display: flex;
+  
+          .form-name {
+            width: 100%;
+            height: 20%;
+            margin: 10px auto 0;
+            text-align: center;
+          }
+        }
+        .form-control {
+          width: 100%;
+          height: 20%;
+          margin: 10px auto 0;
+          text-align: center;
+  
+          .t-form {
+            width: 70%;
+          }
+        }
+      }
+    }
+    .store-edit-main {
+      width: 90%;
+      height: 100%;
+      background-image: url('https://i.gyazo.com/d8c1d3fb769e959719e69c18f9f203d9.jpg');
+      background-size: cover;
+    
+  
+      .login-edit-box {
+        width: 50%;
+        max-width: 500px;
+        min-width: 300px;
+        height: 70%;
+        margin: 40px auto 60px;
+        text-align: center;
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: rgba(224, 250, 250, 0.9);
+        overflow: auto;
+  
+        .img-upload {
+          width: 100%;
+          height: 80px;
+          text-align: center;
+          margin-top: 20px;
+  
+          .weight-bold-text {
+            width: 100%;
+            height: 30px;
+            font-size: 15px;
+            font-weight: bolder;
+          }
+  
+          .click-upload {
+            width: 100%;
+            height: 50px;
+            
+            #store-edit-image {
+              width: 70%;
+              height: 100%;
+              margin: 0 auto;
+            }
+          }
+        } 
+        
+        #store-edit-image-list {
+          margin: 0 auto;
+        }
+          .image-file {
+            width: 60%;
+            height: 60%;
+          }
+      }
+    }
+  }  
 }

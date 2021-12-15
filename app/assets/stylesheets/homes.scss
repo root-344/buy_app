@@ -1,10 +1,20 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@media screen and (min-width: 717px) {
 
-.main-home {
-  width: 90%;
-  height: 100%;
-  background-image: url('https://i.gyazo.com/934214da4a839c5ee241c8d768cc694b.jpg');
-  background-size: cover;
+  .main-home {
+    width: 90%;
+    height: 100%;
+    background-image: url('https://i.gyazo.com/934214da4a839c5ee241c8d768cc694b.jpg');
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 716px) {
+  .main-home {
+    width: 90%;
+    height: 100%;
+    background-image: url('https://i.gyazo.com/934214da4a839c5ee241c8d768cc694b.jpg');
+    background-size: cover;
+  }
 }
