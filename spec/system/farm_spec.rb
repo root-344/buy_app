@@ -15,7 +15,7 @@ RSpec.describe 'Farms', type: :system do
     ).to have_content('新規登録')
     # 新規登録ページに移動する
     visit new_farm_registration_path
-    #出品者情報を入力する
+    # 出品者情報を入力する
     image_path = Rails.root.join('public/images/image.png')
     attach_file('farm[image]', image_path, make_visible: true)
     fill_in 'farm_first_name', with: @farm.first_name
