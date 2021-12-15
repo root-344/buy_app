@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+function script() {
 
   const farmPullDownButton = document.getElementById("farm-select")
   const farmPullDownBox = document.getElementById("farm-pull-down")
@@ -53,4 +53,5 @@ window.addEventListener('load', function(){
       storePullDownBox.setAttribute("style", "display:block");
     }
   });
-});
+};
+window.addEventListener('load', script)
