@@ -420,11 +420,11 @@ ul, li {
     display: flex;
     justify-content: space-around;
     padding-top: 4px;
+    font-size: 15px;
   }
   .header-bar .header-right .header-down .user-name {
     width: 22%;
     height: 70%;
-    font-size: large;
     margin: 20px 0 0 0;
     text-align: center;
     color: black;
@@ -434,7 +434,6 @@ ul, li {
   .header-bar .header-right .header-down .logout {
     width: 22%;
     height: 70%;
-    font-size: large;
     margin: 20px 0 0 0;
     text-align: center;
     color: black;
@@ -444,7 +443,6 @@ ul, li {
   .header-bar .header-right .header-down .item-container {
     width: 22%;
     height: 70%;
-    font-size: large;
     margin: 20px 0 0 0;
     text-align: center;
     color: black;
@@ -454,7 +452,6 @@ ul, li {
   .header-bar .header-right .header-down .new-item {
     width: 22%;
     height: 70%;
-    font-size: large;
     margin: 20px 0 0 0;
     text-align: center;
     color: black;
@@ -551,11 +548,10 @@ ul, li {
   .main-wrapper {
     width: 100vw;
     height: 76vh;
-    display: flex;
   }
   .main-wrapper .item-contents {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 70%;
     background-image: url("https://i.gyazo.com/4cc910e0642a22beae77e0aa61cfcf8a.jpg");
     background-size: cover;
     overflow: auto;
