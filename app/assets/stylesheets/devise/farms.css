@@ -135,22 +135,16 @@
   .main-wrapper {
     width: 100vw;
     height: 86vh;
-    display: flex;
   }
   .main-wrapper .main {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 70%;
     background-image: url("https://i.gyazo.com/683c848bba4baeaa217c0623c4290af1.jpg");
     background-size: cover;
   }
   .main-wrapper .main .login-box {
-    width: 50%;
-    max-width: 500px;
-    min-width: 300px;
-    height: 70%;
-    margin: 40px auto 60px;
-    border: 3px solid black;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(255, 235, 205, 0.9);
     overflow: auto;
   }
@@ -181,12 +175,13 @@
     margin: 0 auto;
   }
   .main-wrapper .main .login-box #farm-image-list {
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
   }
   .main-wrapper .main .login-box .image-file {
-    width: 60%;
-    height: 60%;
-    margin-left: 100px;
+    width: 90%;
+    height: 90%;
   }
   .main-wrapper .main .login-box .login-flash-message {
     margin: 0 auto;
@@ -214,20 +209,15 @@
     width: 70%;
   }
   .main-wrapper .edit-main {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 70%;
     background-image: url("https://i.gyazo.com/d8c1d3fb769e959719e69c18f9f203d9.jpg");
     background-size: cover;
   }
   .main-wrapper .edit-main .login-edit-box {
-    width: 50%;
-    max-width: 500px;
-    min-width: 300px;
-    height: 70%;
-    margin: 40px auto 60px;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    border: 3px solid black;
-    border-radius: 10px;
     background-color: rgba(255, 235, 205, 0.9);
     overflow: auto;
   }
