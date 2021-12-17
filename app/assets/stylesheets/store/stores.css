@@ -178,24 +178,19 @@
 
 @media screen and (max-width: 716px) {
   .store-show-main {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 70%;
     background-image: url("https://i.gyazo.com/917da6e49e9f1ef8956daef752855d99.jpg");
     background-size: cover;
   }
   .store-show-main .store-show-box {
-    width: 80%;
-    max-width: 800px;
-    min-width: 50%;
-    height: 95%;
-    margin: 20px auto;
-    border: 3px solid black;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
     overflow: auto;
   }
   .store-show-main .store-show-box .store-show-status-box {
     width: 100%;
-    height: 80%;
+    height: 350px;
     border-bottom: 3px solid black;
     background-color: rgba(255, 235, 205, 0.8);
   }
@@ -237,7 +232,7 @@
     margin: 0 auto;
   }
   .store-show-main .store-show-box .store-show-status-box .store-status .store-select-btn-container .store-edit-btn {
-    height: 20%;
+    height: 10%;
     text-align: center;
   }
   .store-show-main .store-show-box .store-show-status-box .store-status .store-select-btn-container .store-delete-btn {
