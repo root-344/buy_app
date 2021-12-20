@@ -55,14 +55,14 @@ ul, li {
     text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
   }
   .header-bar .header-left #logo .logo {
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    top: -4px;
-    left: 10px;
+    width: 45%;
+    height: 40%;
+    display: inline-block;
+    padding-left: 3px;
     text-decoration: none;
     font-size: 33px;
     color: red;
+    list-style: none;
   }
   .header-bar .header-left #logo .logo:active {
     /*ボタンを押したとき*/
@@ -368,14 +368,13 @@ ul, li {
     text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
   }
   .header-bar .header-left #logo .logo {
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    top: -4px;
-    left: 10px;
+    width: 40%;
+    height: 40%;
     text-decoration: none;
     font-size: 33px;
     color: red;
+    list-style: none;
+    display: inline-block;
   }
   .header-bar .header-left #logo .logo:active {
     /*ボタンを押したとき*/
