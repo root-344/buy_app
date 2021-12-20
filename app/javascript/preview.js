@@ -1,8 +1,8 @@
 // 商品画像（出品）
-if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.match( /sign_up/ )) {
   document.addEventListener('DOMContentLoaded', function(){
       const ImageList = document.getElementById('image-list');
-  
+      if (!ImageList){ return false;}
+
       const createImageHTML = (blob) => {
         const imageElement = document.createElement('div');
   
@@ -29,7 +29,8 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
 //商品画像（編集）
   document.addEventListener('DOMContentLoaded', function(){
       const editList = document.getElementById('image-edit-list');
-  
+      if (!editList){ return false;}
+
       const createImageHTML = (blob) => {
         const imageElement = document.createElement('div');
   
@@ -57,6 +58,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
   // 出品者画像（新規登録）
     document.addEventListener('DOMContentLoaded', function(){
       const farmImageList = document.getElementById('farm-image-list');
+      if (!farmImageList){ return false;}
 
       const createImageHTML = (blob) => {
         const imageElement = document.createElement('div');
@@ -84,6 +86,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
   // 出品者画像（編集）  
     document.addEventListener('DOMContentLoaded', function(){
       const farmEditList = document.getElementById('farm-edit-image-list');
+      if (!farmEditList){ return false;}
 
       const createImageHTML = (blob) => {
         const imageElement = document.createElement('div');
@@ -112,6 +115,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
     // 購入者画像（新規登録）
     document.addEventListener('DOMContentLoaded', function(){
       const storeImageList = document.getElementById('store-image-list');
+      if (!storeImageList){ return false;}
 
       const createImageHTML = (blob) => {
         const imageElement = document.createElement('div');
@@ -139,6 +143,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
   // 購入者画像（編集）  
     document.addEventListener('DOMContentLoaded', function(){
       const storeEditList = document.getElementById('store-edit-image-list');
+      if (!storeEditList){ return false;}
 
       const createImageHTML = (blob) => {
         const imageElement = document.createElement('div');
@@ -163,7 +168,6 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ ) || document.URL.
         createImageHTML(blob);
       });
     });
-  };
 
   //複数枚画像投稿機能実装時に使用
 // if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
