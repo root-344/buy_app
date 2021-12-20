@@ -62,9 +62,11 @@
     overflow: auto;
   }
   .side .side-names {
-    width: 90%;
-    height: 70%;
-    margin: 5px auto;
+    width: 95%;
+    height: 20%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
     overflow: auto;
   }
   .side .side-names .side-name {
